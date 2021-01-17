@@ -1,5 +1,4 @@
-import firebase from "firebase/app";
-
+import firebase from "../firebase";
 const db = firebase.ref("projects/");
 
 const getAll = () => {
