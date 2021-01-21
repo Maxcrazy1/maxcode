@@ -43,10 +43,10 @@ export default function Form() {
   function handleClick(e) {
     e.preventDefault();
     ProjectService.create({
-      name_project: nameProject,
+      name: nameProject,
       description: description,
-      image_url: imageUrl,
-      page_url: pageUrl,
+      image: imageUrl,
+      url: pageUrl,
     })
       .then(() => {
         alert("Saved");
