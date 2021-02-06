@@ -1,22 +1,20 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import ProjectService from "../../services/Project";
-import swal from 'sweetalert';
+import swal from "sweetalert";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import clsx from "clsx";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
-import Collapse from "@material-ui/core/Collapse";
 import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import { red } from "@material-ui/core/colors";
-import DeleteIcon from '@material-ui/icons/Delete';
+import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from "@material-ui/icons/Edit";
-import MoreVertIcon from "@material-ui/icons/MoreVert";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -44,37 +42,29 @@ const useStyles = makeStyles((theme) => ({
 const ProjectList = () => {
   const classes = useStyles();
   const [projects, setProjects] = useState([]);
+  let history = useHistory();
 
-  const handleClick = (e) => {
-    e.preventDefault();
+  const handleClickDelete = (key) => {
     swal({
-      title: "Are you sure?",
-      text: "Once deleted, you will not be able to recover this imaginary file!",
+      title: "Delete project?",
       icon: "warning",
       buttons: true,
-      dangerMode: true,
-    })
-    .then((willDelete) => {
+      dangerMode: true})
+      .then((willDelete) => {
       if (willDelete) {
-        swal("Poof! Your imaginary file has been deleted!", {
+        ProjectService.remove(key)
+          .then(() => {
+            ProjectService.getAll().on("value", onDataChange);
+          })
+
+        swal("The project has been deleted!", {
           icon: "success",
         });
       } else {
-        swal("Your imaginary file is safe!");
+        swal("The project is kept saved");
       }
     });
   };
-
-  // const deleteTutorial = () => {
-  //   TutorialDataService.remove(currentTutorial.key)
-  //     .then(() => {
-  //       props.refreshList();
-  //     })
-  //     .catch((e) => {
-  //       console.log(e);
-  //     });
-  // };
-
 
   const onDataChange = (fetchProjects) => {
     let projects = [];
@@ -94,6 +84,10 @@ const ProjectList = () => {
     setProjects(projects);
   };
 
+  function setProject(project) {
+    return history.push("/new", { project });
+  }
+
   useEffect(() => {
     ProjectService.getAll().on("value", onDataChange);
 
@@ -111,16 +105,10 @@ const ProjectList = () => {
               <CardHeader
                 avatar={
                   <Avatar aria-label="recipe" className={classes.avatar}>
-                    R
+                    M
                   </Avatar>
                 }
-                action={
-                  <IconButton aria-label="settings">
-                    <MoreVertIcon />
-                  </IconButton>
-                }
                 title={project.name}
-                subheader={"15 September, 2020"}
               />
               <CardMedia
                 className={classes.media}
@@ -133,10 +121,16 @@ const ProjectList = () => {
                 </Typography>
               </CardContent>
               <CardActions disableSpacing>
-                <IconButton onClick={(e)=>handleClick(e)} aria-label="Delete">
+                <IconButton
+                  onClick={(e) => handleClickDelete(project.key)}
+                  aria-label="Delete"
+                >
                   <DeleteIcon />
                 </IconButton>
-                <IconButton aria-label="Edit">
+                <IconButton
+                  onClick={(e) => setProject(project)}
+                  aria-label="Edit"
+                >
                   <EditIcon />
                 </IconButton>
               </CardActions>
@@ -151,4 +145,3 @@ const ProjectList = () => {
 };
 
 export default ProjectList;
-
