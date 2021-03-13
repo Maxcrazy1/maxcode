@@ -9,7 +9,7 @@ import Typography from "@material-ui/core/Typography";
 import FormControl from "@material-ui/core/FormControl";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
-import ProjectService from "../../services/Project";
+import ProjectService from "../../../../services/Project";
 import SaveIcon from "@material-ui/icons/Save";
 import AssignmentTurnedInIcon from "@material-ui/icons/AssignmentTurnedIn";
 
