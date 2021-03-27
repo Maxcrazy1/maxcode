@@ -4,6 +4,7 @@ import GrainIcon from "@material-ui/icons/Grain";
 import EmojiPeopleIcon from "@material-ui/icons/EmojiPeople";
 import QuestionAnswerIcon from "@material-ui/icons/QuestionAnswer";
 import "../styles/sidebar.css";
+import { Link } from "react-router-dom";
 
 export default function Sidebar() {
   return (
@@ -13,19 +14,19 @@ export default function Sidebar() {
 
         <div className="vertical-center">
           <Nav.Item>
-            <Nav.Link href="/about">
+            <Link to="/about">
               <EmojiPeopleIcon />
-            </Nav.Link>
+            </Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link href="/home">
+            <Link to="/home">
               <GrainIcon />
-            </Nav.Link>
+            </Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey="link-1">
+            <Link to="/contact">
               <QuestionAnswerIcon />
-            </Nav.Link>
+            </Link>
           </Nav.Item>
         </div>
       </Nav>
