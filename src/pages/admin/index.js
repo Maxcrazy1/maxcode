@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+
 import {
   BrowserRouter as Router,
   Switch,
+  withRouter,
   Route,
-  Link as LinkRouter,
 } from "react-router-dom";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
@@ -21,6 +22,8 @@ import Link from "@material-ui/core/Link";
 import FormProject from "../admin/components/projects/CreateOrUpdate";
 import ProjectList from "../admin/components/projects/List";
 import { mainListItems } from "../admin/components/listItems";
+import { Auth } from "./context/authContext";
+import Cargando from './components/Cargando'
 
 function Copyright() {
   return (
@@ -119,72 +122,88 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Dashboard() {
+const DashboardAdmin = ({ history }) => {
   const classes = useStyles();
   const [open] = React.useState(false);
+  const { usuario } = useContext(Auth);
+
+  useEffect(() => {
+    if (usuario === null) {
+      history.push("/login");
+    }
+  }, [history, usuario]);
 
   return (
     <Router>
-      <div className={classes.root}>
-        <CssBaseline />
-        <AppBar
-          position="absolute"
-          className={clsx(classes.appBar, open && classes.appBarShift)}
-        >
-          <Toolbar className={classes.toolbar}>
-            <Typography
-              component="h1"
-              variant="h6"
-              color="inherit"
-              noWrap
-              className={classes.title}
-            >
-              Maxcode
-            </Typography>
-            
-          </Toolbar>
-        </AppBar>
-        <Drawer
-          variant="permanent"
-          classes={{
-            paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose),
-          }}
-          open={true}
-        >
-          <div className={classes.toolbarIcon}></div>
-          <Divider />
-          <List>{mainListItems}</List>
-          <Divider />
-        </Drawer>
-        <main className={classes.content}>
-          <div className={classes.appBarSpacer} />
+      {usuario !== null ? (
+        <div className={classes.root}>
+          <CssBaseline />
+          <AppBar
+            position="absolute"
+            className={clsx(classes.appBar, open && classes.appBarShift)}
+          >
+            <Toolbar className={classes.toolbar}>
+              <Typography
+                component="h1"
+                variant="h6"
+                color="inherit"
+                noWrap
+                className={classes.title}
+              >
+                Maxcode
+              </Typography>
+            </Toolbar>
+          </AppBar>
+          <Drawer
+            variant="permanent"
+            classes={{
+              paper: clsx(
+                classes.drawerPaper,
+                !open && classes.drawerPaperClose
+              ),
+            }}
+            open={true}
+          >
+            <div className={classes.toolbarIcon}></div>
+            <Divider />
+            <List>{mainListItems}</List>
+            <Divider />
+          </Drawer>
+          <main className={classes.content}>
+            <div className={classes.appBarSpacer} />
 
-          <Switch>
-            <Container maxWidth="lg" className={classes.container}>
-              <Grid container spacing={3}>
-                <Route exact path="/">
-                  <Grid item xs={12} md={12} lg={12}>
-                    <ProjectList />
-                  </Grid>
-                </Route>
-                <Route path="/new">
-                  <Grid
-                    className={classes.centerContainer}
-                    xs={12}
-                    md={8}
-                    lg={9}
-                  >
-                    <FormProject />
-                  </Grid>
-                </Route>
-              </Grid>
-              <Box pt={4}>
-                <Copyright />
-              </Box>
-            </Container>
-          </Switch>
-        </main>
-      </div>
+            <Switch>
+              <Container maxWidth="lg" className={classes.container}>
+                <Grid container spacing={3}>
+                  <Route exact path="/">
+                    <Grid item xs={12} md={12} lg={12}>
+                      <ProjectList />
+                    </Grid>
+                  </Route>
+                  <Route path="/new">
+                    <Grid
+                      className={classes.centerContainer}
+                      xs={12}
+                      md={8}
+                      lg={9}
+                    >
+                      <FormProject />
+                    </Grid>
+                  </Route>
+                </Grid>
+                <Box pt={4}>
+                  <Copyright />
+                </Box>
+              </Container>
+            </Switch>
+          </main>
+        </div>
+      ) : (
+        <Cargando />
+      )}
+      ;
     </Router>
   );
-}
+};
+
+export default withRouter(DashboardAdmin);

@@ -19,7 +19,7 @@ export default function Sidebar() {
             </Link>
           </Nav.Item>
           <Nav.Item>
-            <Link to="/home">
+            <Link to="/">
               <GrainIcon />
             </Link>
           </Nav.Item>

@@ -1,4 +1,4 @@
-import firebase from "../firebase";
+import { databaseProvider as firebase } from "../firebase";
 const db = firebase.ref("projects/");
 
 const getAll = () => {
