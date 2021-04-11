@@ -1,0 +1,33 @@
+html,
+body {
+    height: 100%;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
+.p-40 {
+    padding: 40px;
+}
+
+.p-80 {
+    padding: 80px;
+}
+.p-100 {
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+}
+.b-0 {
+    border: 0px;
+}
+
+.img-cover {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.title-font{
+  font-family: 'Norwester' !important;
+}

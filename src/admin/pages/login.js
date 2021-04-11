@@ -5,8 +5,8 @@ import { LockOutlined } from "@ant-design/icons";
 import Signup from "./Signup";
 import { withRouter } from "react-router";
 import { firebase, googleAuthProvider } from "../../firebase";
-import Errores from "./components/errores";
-import { Auth } from "./context/authContext";
+import Errores from "./../components/errores";
+import { Auth } from "./../context/authContext";
 
 const Login = ({ history }) => {
   const { Content, Footer } = Layout;

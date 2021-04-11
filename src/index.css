@@ -7,7 +7,44 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* h1,h2,h3,h4,h5{ */
+@font-face {
+  font-family: 'Norwester';
+  src: url(./fonts/norwester.otf) format('opentype')
+}
+
+@font-face {
+  font-family: 'Kollektif';
+  src: local('Kollektif'url(./fonts/Kollektif.ttf) 'truetype');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Norwester';
+  color: #ff2e63;
+}
+p {
+  font-family: 'Kollektif';
+}
+span{
+  font-family: 'Norwester';
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+#root {
+  background: #ECE9E6;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }

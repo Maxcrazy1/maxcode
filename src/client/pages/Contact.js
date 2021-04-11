@@ -1,17 +1,15 @@
-import { Container, Row, Col } from "react-bootstrap";
-import Sidebar from "./components/Sidebar";
+import React from "react";
+import Template from "../components/template";
+import { Row, Col } from "react-bootstrap";
 import EmojiPeopleIcon from "@material-ui/icons/EmojiPeople";
-import "./styles/sidebar.css";
-import "./styles/helpers.css";
+import "../styles/sidebar.css";
+import "../styles/helpers.css";
 
-const About = () => {
+const Contact = () => {
   return (
-    <Container fluid>
-      <Row>
-        <Col xs={1} id="sidebar-wrapper">
-          <Sidebar />
-        </Col>
-        <Col xs={11} id="page-content-wrapper">
+    <React.Fragment>
+      <Template
+        RenderComponent={
           <Row>
             <Col xs={7} className="p-80 text-justify d-flex">
               <div className="m-auto">
@@ -51,10 +49,10 @@ const About = () => {
               />
             </Col>
           </Row>
-        </Col>
-      </Row>
-    </Container>
+        }
+      />
+    </React.Fragment>
   );
 };
 
-export default About;
+export default Contact;

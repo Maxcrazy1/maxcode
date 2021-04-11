@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import ProjectService from "../../../services/Project";
+import ProjectService from "../../services/Project";
 
 import { Modal, Button, Row, Col } from "react-bootstrap";
+import Loading from "./Loading"
 import "../styles/gallery.css";
 
 const Gallery = () => {
@@ -45,10 +46,10 @@ const Gallery = () => {
     <div>
       <ul className="gallery_box">
         {projects.length > 0 ? (
-          projects.map((project) => (
-            <li>
+          projects.map((project, index) => (
+            <li className={`${index===4?'height-top':''} ${index===1?'short-height':''}`}>
               <a onClick={(e)=>setModalProject(project)}>
-                <img src={project.image} />
+                <img src={project.image} className="w-100 h-100 img-cover" />
                 <div className="box_data">
                   <span>{project.name} </span>
                 </div>
@@ -56,7 +57,7 @@ const Gallery = () => {
             </li>
           ))
         ) : (
-          <h3>Sin registros</h3>
+          <Loading />
         )}
       </ul>
       <Modal size="xl" show={show} onHide={handleClose}>

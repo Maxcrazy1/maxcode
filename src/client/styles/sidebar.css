@@ -12,12 +12,15 @@
 
 #sidebar-wrapper {
     min-height: 100vh !important;
-    width: 100vw;
+    width: 7rem;
     margin-left: -4rem;
     -webkit-transition: margin .25s ease-out;
     -moz-transition: margin .25s ease-out;
     -o-transition: margin .25s ease-out;
     transition: margin .25s ease-out;
+    position: absolute;
+    background-color: #252a34;
+    z-index: 1;
 }
 
 #sidebar-wrapper .sidebar-heading {
@@ -26,15 +29,18 @@
 }
 
 #page-content-wrapper {
+    height: 100%;
     min-width: 0;
-    width: 100%;
+    width: 97%;
+    margin-left: 3%;
     padding: 0 0 0 0;
 }
 
-.vertical-center{
+.vertical-center {
     margin: 0;
     position: absolute;
-    top: 50%;
+    top: 50vh;
+    left: 1.3vh;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }

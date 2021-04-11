@@ -5,7 +5,7 @@ import { LockOutlined } from "@ant-design/icons";
 import { firebase } from "../../firebase";
 
 import { withRouter } from "react-router";
-import Errores from "./components/errores";
+import Errores from "./../components/errores";
 
 const Signup = ({ setsignup, history }) => {
   const [error, seterror] = useState("");

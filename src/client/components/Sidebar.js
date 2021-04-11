@@ -13,19 +13,19 @@ export default function Sidebar() {
         <div className="sidebar-sticky "></div>
 
         <div className="vertical-center">
-          <Nav.Item>
+          <Nav.Item className="mt-2" >
             <Link to="/about">
-              <EmojiPeopleIcon />
+              <EmojiPeopleIcon style={{fill: "#08d9d6"}}/>
             </Link>
           </Nav.Item>
-          <Nav.Item>
+          <Nav.Item className="mt-2">
             <Link to="/">
-              <GrainIcon />
+              <GrainIcon style={{fill: "#08d9d6"}} />
             </Link>
           </Nav.Item>
-          <Nav.Item>
+          <Nav.Item className="mt-2">
             <Link to="/contact">
-              <QuestionAnswerIcon />
+              <QuestionAnswerIcon  style={{fill: "#08d9d6"}}/>
             </Link>
           </Nav.Item>
         </div>

@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Projects from "./pages/admin";
-import Login from "./pages/admin/login";
-import Home from "./pages/client";
-import About from "./pages/client/About";
-import Contact from "./pages/client/Contact";
-import { AuthContext } from "./pages/admin/context/authContext";
+import Projects from "./admin/pages/index";
+import Login from "./admin/pages/login";
+import Home from "./client/pages/index";
+import About from "./client/pages/About";
+import Contact from "./client/pages/Contact";
+import { AuthContext } from "./admin/context/authContext";
 
 export default function Dashboard() {
   return (

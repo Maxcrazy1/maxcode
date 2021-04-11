@@ -19,11 +19,11 @@ import Divider from "@material-ui/core/Divider";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Link from "@material-ui/core/Link";
-import FormProject from "../admin/components/projects/CreateOrUpdate";
-import ProjectList from "../admin/components/projects/List";
-import { mainListItems } from "../admin/components/listItems";
-import { Auth } from "./context/authContext";
-import Cargando from './components/Cargando'
+import FormProject from "../components/projects/CreateOrUpdate";
+import ProjectList from "../components/projects/List";
+import { mainListItems } from "../components/listItems";
+import { Auth } from "../context/authContext";
+import Cargando from '../components/Cargando'
 
 function Copyright() {
   return (
