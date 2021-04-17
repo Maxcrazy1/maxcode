@@ -2,7 +2,7 @@ import React from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import ReactTypingEffect from "react-typing-effect";
-import Template from "../components/template";
+import Template from "../components/Template";
 import { Row, Col } from "react-bootstrap";
 import PassionChip from "../components/PassionChip";
 import "../styles/sidebar.css";

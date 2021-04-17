@@ -1,54 +1,95 @@
 import React from "react";
-import Template from "../components/template";
-import { Row, Col } from "react-bootstrap";
-import EmojiPeopleIcon from "@material-ui/icons/EmojiPeople";
-import "../styles/sidebar.css";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+import Avatar from "@material-ui/core/Avatar";
+import Template from "../components/Template";
+import Typography from "@material-ui/core/Typography";
+import Profiles from "../components/Profiles";
+import Badge from "@material-ui/core/Badge";
+import { makeStyles, withStyles } from "@material-ui/core/styles";
+import { Row, Col, Container } from "react-bootstrap";
 import "../styles/helpers.css";
 
+const StyledBadge = withStyles((theme) => ({
+  badge: {
+    backgroundColor: "#44b700",
+    color: "#44b700",
+    boxShadow: `0 0 0 2px ${theme.palette.background.paper}`,
+    "&::after": {
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      borderRadius: "50%",
+      animation: "$ripple 1.2s infinite ease-in-out",
+      border: "1px solid currentColor",
+      content: '""',
+    },
+  },
+  "@keyframes ripple": {
+    "0%": {
+      transform: "scale(.8)",
+      opacity: 1,
+    },
+    "100%": {
+      transform: "scale(2.4)",
+      opacity: 0,
+    },
+  },
+}))(Badge);
+
+AOS.init();
 const Contact = () => {
   return (
     <React.Fragment>
       <Template
         RenderComponent={
-          <Row>
-            <Col xs={7} className="p-80 text-justify d-flex">
-              <div className="m-auto">
-                <h1>My personal project</h1>
-                <p>
-                  I’ve spent the past 12+ years working across different areas
-                  of digital design; front-end development, email design,
-                  marketing site pages, app UI/UX, to my current role designing
-                  products for mobile platforms. These days my time is spent
-                  researching, designing, prototyping, and coding. I also help
-                  designers get started with their careers. Out of the office
-                  you’ll find me dreaming of soccer, playing bass guitar, and
-                  petting all the good dogs.
-                  <EmojiPeopleIcon />
-                </p>
+          <Container fluid className="h-100">
+            <Row className="h-100">
+              <Col xs={6} className="p-100 text-justify d-flex">
+                <div className="m-auto">
+                  <div data-aos="slide-right" >
+                    <StyledBadge
+                      overlap="circle"
+                      anchorOrigin={{
+                        vertical: "bottom",
+                        horizontal: "right",
+                      }}
+                      variant="dot"
+                    >
+                      <Avatar
+                        alt="Cristian Serrano"
+                        src="https://cdn3.f-cdn.com/ppic/132863215/logo/23955762/QnRA0/profile_logo_.jpeg"
+                        style={{
+                          width: "60px",
+                          height: "60px",
+                        }}
+                      />
+                    </StyledBadge>
 
-                <div className="text-center">
-                  <a href="">
-                    <EmojiPeopleIcon />
-                  </a>
-                  <a href="">
-                    <EmojiPeopleIcon />
-                  </a>
-                  <a href="">
-                    <EmojiPeopleIcon />
-                  </a>
-                  <a href="">
-                    <EmojiPeopleIcon />
-                  </a>
+                    <Typography
+                      className="title-font"
+                      variant="h2"
+                      component="h1"
+                    >
+                      Comunicate conmigo
+                    </Typography>
+                  </div>
+                  <Typography data-aos="fade-up">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+                    aliquid repellendus ut maiores aperiam rerum officiis
+                    quibusdam. Aspernatur voluptate totam, praesentium
+                    blanditiis placeat repellat velit error facilis
+                    exercitationem maiores veritatis?
+                  </Typography>
                 </div>
-              </div>
-            </Col>
-            <Col xs={5}>
-              <img
-                className=""
-                src="https://source.unsplash.com/random/1024x768"
-              />
-            </Col>
-          </Row>
+              </Col>
+              <Col xs={6} data-aos="fade-left" className="m-auto">
+                <Profiles />
+              </Col>
+            </Row>
+          </Container>
         }
       />
     </React.Fragment>
