@@ -12,6 +12,9 @@ import TextField from "@material-ui/core/TextField";
 import ProjectService from "../../../services/Project";
 import SaveIcon from "@material-ui/icons/Save";
 import AssignmentTurnedInIcon from "@material-ui/icons/AssignmentTurnedIn";
+import Chip from "@material-ui/core/Chip";
+import Autocomplete from "@material-ui/lab/Autocomplete";
+import Languages from "../../../services/Languages";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -45,6 +48,7 @@ export default function Form() {
   const [image, setImage] = useState("");
   const [internalImage, setInternalImage] = useState("");
   const [url, setUrl] = useState("");
+  const [tags, setTags] = useState([]);
   const location = useLocation();
 
   useEffect(() => {
@@ -54,6 +58,7 @@ export default function Form() {
       setImage(project.image);
       setInternalImage(project.internalImage);
       setUrl(project.url);
+      setTags(project.tags);
       setKeyProject(project.key);
     };
     if (location.state) {
@@ -89,6 +94,7 @@ export default function Form() {
       description,
       image,
       internalImage,
+      tags,
       url,
     };
   };
@@ -145,6 +151,35 @@ export default function Form() {
                   placeholder="clasifiventas.com"
                   value={url}
                   onChange={(event) => setUrl(event.target.value)}
+                />
+              </FormControl>
+            </Grid>
+
+            <Grid item xs={12}>
+              <FormControl className={classes.fullWidth}>
+                <Autocomplete
+                  multiple
+                  id="tags-filled"
+                  options={Languages.map((language) => language)}
+                  freeSolo
+                  onChange={(event, value) => setTags(value.join(", "))}
+                  renderTags={(value, getTagProps) =>
+                    value.map((option, index) => (
+                      <Chip
+                        variant="outlined"
+                        label={option}
+                        {...getTagProps({ index })}
+                      />
+                    ))
+                  }
+                  renderInput={(params) => (
+                    <TextField
+                      {...params}
+                      variant="filled"
+                      label="Languages"
+                      placeholder="React, Laravel"
+                    />
+                  )}
                 />
               </FormControl>
             </Grid>

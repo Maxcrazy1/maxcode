@@ -29,7 +29,6 @@ const Login = ({ history }) => {
       .auth()
       .signInWithEmailAndPassword(usuario, clave)
       .then((result) => {
-        console.log(result);
         history.push("/panel");
       })
       .catch((error) => {
@@ -42,7 +41,6 @@ const Login = ({ history }) => {
       .auth()
       .signInWithPopup(provider)
       .then((result) => {
-        console.log(result);
       })
       .catch((error) => {
         seterror(error.message);

@@ -79,6 +79,7 @@ const ProjectList = () => {
         image: data.image,
         internalImage: data.internalImage,
         url: data.url,
+        tags:data.tags
       });
     });
 
