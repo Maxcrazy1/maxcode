@@ -39,17 +39,35 @@ const StyledBadge = withStyles((theme) => ({
   },
 }))(Badge);
 
+const useStyles = makeStyles((theme) => ({
+  contentDescription: {
+    padding: "5rem",
+    textAlign: "justify",
+    display: "flex",
+    [theme.breakpoints.down("xs")]: {
+      padding: "1rem",
+      marginBottom: "2rem",
+    },
+  },
+}));
+
 AOS.init();
 const Contact = () => {
+  const classes = useStyles();
   return (
     <React.Fragment>
       <Template
         RenderComponent={
           <Container fluid className="h-100">
             <Row className="h-100">
-              <Col xs={6} className="p-100 text-justify d-flex">
+              <Col
+                xs={12}
+                sm={12}
+                md={6}
+                className={classes.contentDescription}
+              >
                 <div className="m-auto">
-                  <div data-aos="slide-right" >
+                  <div data-aos="slide-right">
                     <StyledBadge
                       overlap="circle"
                       anchorOrigin={{
@@ -76,7 +94,7 @@ const Contact = () => {
                       Comunicate conmigo
                     </Typography>
                   </div>
-                  <Typography data-aos="fade-up">
+                  <Typography className="paragraph-font" data-aos="fade-up">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
                     aliquid repellendus ut maiores aperiam rerum officiis
                     quibusdam. Aspernatur voluptate totam, praesentium
@@ -85,7 +103,13 @@ const Contact = () => {
                   </Typography>
                 </div>
               </Col>
-              <Col xs={6} data-aos="fade-left" className="m-auto">
+              <Col
+                xs={12}
+                sm={12}
+                md={6}
+                data-aos="fade-left"
+                className="m-auto"
+              >
                 <Profiles />
               </Col>
             </Row>

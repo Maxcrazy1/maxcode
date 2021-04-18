@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import ProjectService from "../../services/Project";
-
 import { Modal, Button, Row, Col } from "react-bootstrap";
-import Loading from "./Loading"
+import Loading from "./Loading";
 import "../styles/gallery.css";
+import "../styles/helpers.css";
 
 const Gallery = () => {
   const [project, setProject] = useState([]);
@@ -27,6 +27,7 @@ const Gallery = () => {
         name: data.name,
         description: data.description,
         image: data.image,
+        internalImage: data.internalImage,
         url: data.url,
       });
     });
@@ -47,11 +48,15 @@ const Gallery = () => {
       <ul className="gallery_box">
         {projects.length > 0 ? (
           projects.map((project, index) => (
-            <li className={`${index===4?'height-top':''} ${index===1?'short-height':''}`}>
-              <a onClick={(e)=>setModalProject(project)}>
+            <li
+              className={`${index === 4 ? "height-top" : ""} ${
+                index === 1 ? "short-height" : ""
+              }`}
+            >
+              <a onClick={(e) => setModalProject(project)}>
                 <img src={project.image} className="w-100 h-100 img-cover" />
                 <div className="box_data">
-                  <span>{project.name} </span>
+                  <span>{project.name}</span>
                 </div>
               </a>
             </li>
@@ -62,14 +67,16 @@ const Gallery = () => {
       </ul>
       <Modal size="xl" show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>{project.name}</Modal.Title>
+          <Modal.Title className="title-font">{project.name}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Row>
             <Col xs={5}>
-              <img src="https://source.unsplash.com/800x600/?tech" />
+              <img src={project.internalImage} />
             </Col>
-            <Col xs={7}>{project.description}</Col>
+            <Col className="paragraph-font" xs={7}>
+              {project.description}
+            </Col>
           </Row>
         </Modal.Body>
       </Modal>

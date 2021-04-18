@@ -14,12 +14,18 @@ body {
 .p-80 {
     padding: 80px;
 }
+
 .p-100 {
     padding-left: 100px !important;
     padding-right: 100px !important;
 }
+
 .b-0 {
     border: 0px;
+}
+
+.w-70 {
+    width: 70%;
 }
 
 .img-cover {
@@ -28,6 +34,9 @@ body {
     object-position: center center;
 }
 
-.title-font{
-  font-family: 'Norwester' !important;
+.title-font {
+    font-family: 'Norwester' !important;
+}
+.paragraph-font {
+  font-family: 'Kollektif' !important;
 }

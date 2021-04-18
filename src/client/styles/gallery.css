@@ -1,6 +1,8 @@
-body {
-    overflow: hidden;
-    /* Hide scrollbars */
+@media only screen and (min-width: 868px) {
+    body {
+        overflow: hidden;
+        /* Hide scrollbars */
+    }
 }
 
 img {
@@ -50,8 +52,7 @@ img {
 }
 
 .gallery_box li:nth-child(even) .box_data {
-    background: rgba(8,217,214, 0.27)
-    
+    background: rgba(8, 217, 214, 0.27)
 }
 
 .gallery_box .box_data {
@@ -73,7 +74,7 @@ img {
 }
 
 .gallery_box li:hover .box_data {
-    background: rgba(255,46,99, 0.55)
+    background: rgba(255, 46, 99, 0.55)
 }
 
 .height-top {
@@ -82,6 +83,6 @@ img {
     height: 66.4vh !important;
 }
 
-.short-height{
+.short-height {
     height: 35.8vh !important;
 }

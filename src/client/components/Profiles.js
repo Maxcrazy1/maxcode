@@ -8,9 +8,6 @@ import TimelineConnector from "@material-ui/lab/TimelineConnector";
 import TimelineContent from "@material-ui/lab/TimelineContent";
 import TimelineOppositeContent from "@material-ui/lab/TimelineOppositeContent";
 import TimelineDot from "@material-ui/lab/TimelineDot";
-import FastfoodIcon from "@material-ui/icons/Fastfood";
-import LaptopMacIcon from "@material-ui/icons/LaptopMac";
-import HotelIcon from "@material-ui/icons/Hotel";
 import RepeatIcon from "@material-ui/icons/Repeat";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
@@ -22,15 +19,26 @@ const useStyles = makeStyles((theme) => ({
   },
   colorTitleCard: {
     color: "#09a29f",
+    [theme.breakpoints.down("xs")]: {
+      width: "65%",
+      whiteSpace: "nowrap",
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+    },
   },
   secondaryTail: {
     backgroundColor: theme.palette.secondary.main,
   },
-  borderGradient:{
-    borderStyle:'solid',
-    borderWidth:'7px',
-    borderImage:'conic-gradient(#08d9d6,#ff2e63,#08d9d6) 1',
-  }
+  borderGradient: {
+    borderStyle: "solid",
+    borderWidth: "7px",
+    borderImage: "conic-gradient(#08d9d6,#ff2e63,#08d9d6) 1",
+    [theme.breakpoints.down("xs")]: {
+      marginBottom: '5rem',
+    },
+
+  },
+ 
 }));
 
 export default function CustomizedTimeline() {
@@ -41,7 +49,7 @@ export default function CustomizedTimeline() {
       <TimelineItem>
         <TimelineOppositeContent>
           <Typography variant="body2" color="textSecondary">
-            ¿Que esperas?
+          👨‍💻💎
           </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
@@ -68,7 +76,7 @@ export default function CustomizedTimeline() {
                 Linkedin
               </Typography>
             </a>
-            <Typography>Comunicación con empresas 🏢</Typography>
+            <Typography >Comunicación con empresas 🏢</Typography>
           </Paper>
         </TimelineContent>
       </TimelineItem>
@@ -99,18 +107,16 @@ export default function CustomizedTimeline() {
                 variant="h6"
                 component="h1"
               >
-                Freelancer
+                Free
               </Typography>
             </a>
-            <Typography>Guía y apoyo 👨‍💻🔥</Typography>
+            <Typography >Guía y apoyo 👨‍💻🔥</Typography>
           </Paper>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent>
-          <Typography variant="body2" color="textSecondary">
-            Construyamos tus ideas juntos
-          </Typography>
+          <Typography variant="body2" color="textSecondary">Doing us 🤝</Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineDot color="primary" variant="outlined">

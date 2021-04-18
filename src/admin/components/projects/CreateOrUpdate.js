@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     marginTop: theme.spacing(2),
-    marginBottom:theme.spacing(2),
+    marginBottom: theme.spacing(2),
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -43,6 +43,7 @@ export default function Form() {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
+  const [internalImage, setInternalImage] = useState("");
   const [url, setUrl] = useState("");
   const location = useLocation();
 
@@ -51,6 +52,7 @@ export default function Form() {
       setName(project.name);
       setDescription(project.description);
       setImage(project.image);
+      setInternalImage(project.internalImage);
       setUrl(project.url);
       setKeyProject(project.key);
     };
@@ -86,6 +88,7 @@ export default function Form() {
       name,
       description,
       image,
+      internalImage,
       url,
     };
   };
@@ -121,6 +124,16 @@ export default function Form() {
                   label="Url Image"
                   value={image}
                   onChange={(event) => setImage(event.target.value)}
+                />
+              </FormControl>
+            </Grid>
+            <Grid item xs={12}>
+              <FormControl className={classes.fullWidth}>
+                <TextField
+                  id="url-internal-image"
+                  label="Url Internal Image"
+                  value={internalImage}
+                  onChange={(event) => setInternalImage(event.target.value)}
                 />
               </FormControl>
             </Grid>

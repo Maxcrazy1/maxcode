@@ -3,8 +3,8 @@ import { Nav } from "react-bootstrap";
 import GrainIcon from "@material-ui/icons/Grain";
 import EmojiPeopleIcon from "@material-ui/icons/EmojiPeople";
 import QuestionAnswerIcon from "@material-ui/icons/QuestionAnswer";
-import "../styles/sidebar.css";
 import { Link } from "react-router-dom";
+import "../styles/sidebar.css";
 
 export default function Sidebar() {
   return (

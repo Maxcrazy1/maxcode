@@ -77,6 +77,7 @@ const ProjectList = () => {
         name: data.name,
         description: data.description,
         image: data.image,
+        internalImage: data.internalImage,
         url: data.url,
       });
     });
@@ -112,7 +113,7 @@ const ProjectList = () => {
               />
               <CardMedia
                 className={classes.media}
-                image="https://source.unsplash.com/random"
+                image={project.internalImage}
                 title={project.name}
               />
               <CardContent>
