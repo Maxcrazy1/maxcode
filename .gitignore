@@ -24,3 +24,5 @@ yarn-error.log*
 
 src/.fuse*
 *swp*
+
+package-lock.json

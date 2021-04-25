@@ -6,6 +6,7 @@ import ReactTypingEffect from "react-typing-effect";
 import Template from "../components/Template";
 import { Row, Col, Container } from "react-bootstrap";
 import PassionChip from "../components/PassionChip";
+import Typography from "@material-ui/core/Typography";
 
 import "../styles/helpers.css";
 
@@ -18,6 +19,12 @@ const useStyles = makeStyles((theme) => ({
       padding: "1rem",
       marginBottom: "2rem",
     },
+  },
+  textDescription:{
+    fontFamily: "Kollektif",
+    textAlign: 'center',
+      marginTop: "1.5rem",
+    fontSize:"18px"
   },
   titleFont: {
     textTransform: "uppercase",
@@ -56,9 +63,9 @@ const About = () => {
                       "Soy Cristian Serrano 🤡👾👽🤙🏾",
                     ]}
                   />
-                  <p data-aos="slide-left" className="mt-4">
-		Me he vuelto un aficionado del código desde hace unos cuantos años atras, lo que me ha impulsado a enfretarme a muchos desafios 🤔,
-	sin embargo siempre tomo en cuenta una frase: "Algún día diré: 'estuvo complejo, pero lo logré'". En mi viaje 🛫 seguiran habiendo muchos peldaños que seguir subiendo, aún así lo hago con animo 🤩💪, porque me encanta desarrollar aplicaciones, sistemas y soluciones modulares, prolijas y escalables ✅💻📱</p>
+                  <Typography data-aos="slide-right" className={classes.textDescription}>
+                    Me he vuelto un aficionado del código desde hace unos cuantos años atras, lo que me ha impulsado a enfretarme a muchos desafios 🤔,
+                    sin embargo siempre tomo en cuenta una frase: "Algún día diré: 'estuvo complejo, pero lo logré'". En mi viaje 🛫 seguiran habiendo muchos peldaños que seguir subiendo, aún así lo hago con animo 🤩💪, porque me encanta desarrollar aplicaciones, sistemas y soluciones modulares, prolijas y escalables ✅💻📱</Typography>
 
                   <div data-aos="slide-right" className="text-center mt-4">
                     <PassionChip />

@@ -49,6 +49,11 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: "2rem",
     },
   },
+  textDescription:{
+    fontFamily: "Kollektif",
+      marginTop: "1.5rem",
+    fontSize:"18px"
+  },
 }));
 
 AOS.init();
@@ -94,7 +99,7 @@ const Contact = () => {
                       Comunicate conmigo
                     </Typography>
                   </div>
-                  <Typography className="paragraph-font" data-aos="fade-up">
+                  <Typography className={classes.textDescription}  data-aos="fade-up">
 Para mi sería un placer ayudarte a desarrollar tus ideas 🧠📲, comparte tus necesidades conmigo, a través de cualquiera de los medios presentados en el recuadro, cuando tenga un momento disponible responderé tu mensaje 📨 y podremos analizar como dar con una solución ideal para todos 😃✅🌠
 		</Typography>
                 </div>
