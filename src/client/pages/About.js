@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
   titleFont: {
     textTransform: "uppercase",
-    opacity: 1,
+    opacity: '1 !important',
     fontFamily: "Norwester",
     fontSize: "30px",
     [theme.breakpoints.down("xs")]: {
@@ -57,15 +57,8 @@ const About = () => {
                     ]}
                   />
                   <p data-aos="slide-left" className="mt-4">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Nobis dolor nisi ducimus quae nemo quisquam eligendi qui rem
-                    inventore distinctio alias enim nam ex eveniet, facilis,
-                    illo iure consequuntur labore. Quod necessitatibus delectus
-                    earum natus ratione soluta illo enim. Quia maxime excepturi
-                    explicabo quis! Exercitationem ducimus pariatur, excepturi,
-                    illo voluptatum veritatis et. Natus aspernatur quasi
-                    similique pariatur?
-                  </p>
+		Me he vuelto un aficionado del código desde hace unos cuantos años atras, lo que me ha impulsado a enfretarme a muchos desafios 🤔,
+	sin embargo siempre tomo en cuenta una frase: "Algún día diré: 'estuvo complejo, pero lo logré'". En mi viaje 🛫 seguiran habiendo muchos peldaños que seguir subiendo, aún así lo hago con animo 🤩💪, porque me encanta desarrollar aplicaciones, sistemas y soluciones modulares, prolijas y escalables ✅💻📱</p>
 
                   <div data-aos="slide-right" className="text-center mt-4">
                     <PassionChip />

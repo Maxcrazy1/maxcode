@@ -142,7 +142,7 @@ export default function CustomizedTimeline() {
                 Workana
               </Typography>
             </a>
-            <Typography>Código y disciplina</Typography>
+            <Typography>Proyectos independientes</Typography>
           </Paper>
         </TimelineContent>
       </TimelineItem>
@@ -159,13 +159,16 @@ export default function CustomizedTimeline() {
         </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
-            <Typography
-              className={classes.colorTitleCard}
-              variant="h6"
-              component="h1"
-            >
-              Gmail
-            </Typography>
+	  <a 
+              target="_blank"
+              rel="noopener noreferrer"
+	  href="https://mail.google.com/mail/?view=cm&fs=1&to=serranocristian9@gmail.com&su=Un proyecto o solución a desarrollar 🚀&body=Indique sus requerimientos&"><Typography
+	  className={classes.colorTitleCard}
+	  variant="h6"
+	  component="h1"
+	  >
+	  Gmail
+	  </Typography></a>
             <Typography>El clasico email 💎</Typography>
           </Paper>
         </TimelineContent>
@@ -186,7 +189,7 @@ export default function CustomizedTimeline() {
               Revisa de nuevo
             </Typography>
             <Typography>
-              En esas 3 redes puedes contactarte conmigo 💎
+	  ¡En alguna de esas 4 redes podemos comunicarnos!
             </Typography>
           </Paper>
         </TimelineContent>

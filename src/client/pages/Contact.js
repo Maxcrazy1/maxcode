@@ -95,12 +95,8 @@ const Contact = () => {
                     </Typography>
                   </div>
                   <Typography className="paragraph-font" data-aos="fade-up">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-                    aliquid repellendus ut maiores aperiam rerum officiis
-                    quibusdam. Aspernatur voluptate totam, praesentium
-                    blanditiis placeat repellat velit error facilis
-                    exercitationem maiores veritatis?
-                  </Typography>
+Para mi sería un placer ayudarte a desarrollar tus ideas 🧠📲, comparte tus necesidades conmigo, a través de cualquiera de los medios presentados en el recuadro, cuando tenga un momento disponible responderé tu mensaje 📨 y podremos analizar como dar con una solución ideal para todos 😃✅🌠
+		</Typography>
                 </div>
               </Col>
               <Col
