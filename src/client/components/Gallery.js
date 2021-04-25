@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ProjectService from "../../services/Project";
-import { Modal, Button, Row, Col } from "react-bootstrap";
+import { Modal, Row, Col } from "react-bootstrap";
 import Loading from "./Loading";
 import marked from "marked";
 import Chip from "@material-ui/core/Chip";
@@ -8,7 +8,7 @@ import "../styles/gallery.css";
 import "../styles/helpers.css";
 
 const fillChips = (language) => {
-  return <Chip label={language} variant="outlined" />;
+  return <Chip key={language} label={language} variant="outlined" />;
 };
 
 const Gallery = () => {
@@ -49,7 +49,6 @@ const Gallery = () => {
       ProjectService.getAll().off("value", onDataChange);
     };
   }, []);
-
   return (
     <div>
       <ul className="gallery_box">
@@ -61,7 +60,7 @@ const Gallery = () => {
                 index === 1 ? "short-height" : ""
               }`}
             >
-              <a onClick={(e) => setModalProject(project)}>
+              <a href="/#" onClick={(e) => setModalProject(project)}>
                 <img
                   src={project.image}
                   alt={project.name}
