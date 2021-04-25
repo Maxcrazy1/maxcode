@@ -17,19 +17,21 @@ const useStyles = makeStyles({
   btnColor: {
     color: "#edeae7",
   },
-  selectedIcon: {
-    color: "#08d9d6",
+  btnActive: {
+    color: "#ff2e63",
   },
 });
 
 export default function FooterNavbar() {
+	const path = window.location.pathname;
   const classes = useStyles();
 
   return (
     <BottomNavigation className={classes.root}>
       <Link to="/about">
         <BottomNavigationAction
-          className={classes.btnColor}
+
+          className={path==='/about' ? classes.btnActive : classes.btnColor}
           label="Sobre mi"
           icon={<EmojiPeopleIcon />}
         />
@@ -37,7 +39,7 @@ export default function FooterNavbar() {
 
       <Link to="/">
         <BottomNavigationAction
-          className={classes.btnColor}
+          className={path==='/' ? classes.btnActive : classes.btnColor}
           label="Proyectos"
           icon={<GrainIcon />}
         />
@@ -45,7 +47,7 @@ export default function FooterNavbar() {
 
       <Link to="/contact">
         <BottomNavigationAction
-          className={classes.btnColor}
+                    className={path==='/contact' ? classes.btnActive : classes.btnColor}
           label="Contacto"
           icon={<QuestionAnswerIcon />}
         />

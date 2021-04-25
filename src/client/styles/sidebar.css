@@ -39,3 +39,7 @@ height: 100%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+
+.active{
+    fill: #ff2e63 !important;
+}

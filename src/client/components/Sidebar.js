@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import "../styles/sidebar.css";
 
 export default function Sidebar() {
+	const path = window.location.pathname;
   return (
     <>
       <Nav className="d-md-block bg-light sidebar" activeKey="/home">
@@ -16,17 +17,17 @@ export default function Sidebar() {
         <div className="vertical-center">
 	  <Tooltip title="Quien soy?"><Nav.Item className="mt-2" >
 	  <Link to="/about">
-	  <EmojiPeopleIcon style={{fill: "#08d9d6"}}/>
+	  <EmojiPeopleIcon style={path==='/about'?{fill:'#ff2e63'}: {fill: "#08d9d6"} }/>
 	  </Link>
 	  </Nav.Item></Tooltip>
 	  <Tooltip title="Proyectos"><Nav.Item className="mt-2">
 	  <Link to="/">
-	  <GrainIcon style={{fill: "#08d9d6"}} />
+			<GrainIcon style={path==='/'?{fill:'#ff2e63'}: {fill: "#08d9d6"} } />
 	  </Link>
 	  </Nav.Item></Tooltip>
 	  <Tooltip title="Contacto"><Nav.Item className="mt-2">
 	  <Link to="/contact">
-	  <QuestionAnswerIcon  style={{fill: "#08d9d6"}}/>
+			<QuestionAnswerIcon style={path==='/contact'?{fill:'#ff2e63'}: {fill: "#08d9d6"} }/>
 	  </Link>
 	  </Nav.Item></Tooltip>
         </div>
