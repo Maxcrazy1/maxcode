@@ -1,7 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Layout } from "antd";
 import { Form, Input, Button } from "antd";
-import { LockOutlined } from "@ant-design/icons";
 import Signup from "./Signup";
 import { withRouter } from "react-router";
 import { firebase, googleAuthProvider } from "../../firebase";

@@ -49,7 +49,6 @@ const About = () => {
                   <ReactTypingEffect
                     data-aos="fade-up"
                     className={classes.titleFont}
-                    // h3 title-font
                     text={[
                       "Siempre buscando mi siguiente nivel 🐺🏅",
                       "Enamorado del clean code 😍✒️",
@@ -66,7 +65,6 @@ const About = () => {
                     explicabo quis! Exercitationem ducimus pariatur, excepturi,
                     illo voluptatum veritatis et. Natus aspernatur quasi
                     similique pariatur?
-                    
                   </p>
 
                   <div data-aos="slide-right" className="text-center mt-4">
@@ -76,6 +74,7 @@ const About = () => {
               </Col>
               <Col xs={12} sm={12} md={5} className="p-0 h-100">
                 <img
+                  alt="about"
                   data-aos="slide-left"
                   className="w-100 h-100 img-cover"
                   src="https://source.unsplash.com/QXDJGPZTwxs"
