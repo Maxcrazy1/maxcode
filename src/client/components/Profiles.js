@@ -142,7 +142,7 @@ export default function CustomizedTimeline() {
                 Workana
               </Typography>
             </a>
-            <Typography>Proyectos independientes</Typography>
+            <Typography>Soluciones 🔧</Typography>
           </Paper>
         </TimelineContent>
       </TimelineItem>
@@ -186,10 +186,10 @@ export default function CustomizedTimeline() {
               variant="h6"
               component="h1"
             >
-              Revisa de nuevo
+              Mis opciones
             </Typography>
             <Typography>
-	  ¡En alguna de esas 4 redes podemos comunicarnos!
+              ¡Hablemos por alguna de ellas!
             </Typography>
           </Paper>
         </TimelineContent>

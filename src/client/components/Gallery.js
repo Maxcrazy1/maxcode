@@ -8,7 +8,7 @@ import "../styles/gallery.css";
 import "../styles/helpers.css";
 
 const fillChips = (language) => {
-  return <Chip key={language} label={language} variant="outlined" />;
+  return <Chip className="m-1" key={language} label={language} variant="outlined" />;
 };
 
 const Gallery = () => {
@@ -77,20 +77,28 @@ const Gallery = () => {
         )}
       </ul>
       <Modal size="xl" show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
+        <Modal.Header className="text-center" closeButton>
+<Row className="w-100">
+            <Col xs={12}  className="mb-2">
           <Modal.Title className="title-font">{project.name}</Modal.Title>
+            </Col>
+            <Col 
+xs={12} 
+            >
           {project.tags
             ? project.tags.map((language) => fillChips(language))
             : null}
-        </Modal.Header>
+            </Col>
+          </Row>
+       </Modal.Header>
         <Modal.Body>
           <Row>
-            <Col xs={5}>
+            <Col xs={12} sm={12} md={5} className="mb-4">
               <img src={project.internalImage} alt={project.name} />
             </Col>
             <Col
               className="paragraph-font"
-              xs={7}
+                                                                                                        xs={12} sm={12} md={7}
               dangerouslySetInnerHTML={{ __html: project.description }}
             ></Col>
           </Row>
