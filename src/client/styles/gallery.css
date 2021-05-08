@@ -86,3 +86,7 @@ img {
 .short-height {
     height: 35.8vh !important;
 }
+
+.modal-content{
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+}

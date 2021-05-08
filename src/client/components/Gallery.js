@@ -5,6 +5,7 @@ import Loading from "./Loading";
 import marked from "marked";
 import Chip from "@material-ui/core/Chip";
 import "../styles/gallery.css";
+
 import "../styles/helpers.css";
 
 const fillChips = (language) => {
@@ -78,19 +79,17 @@ const Gallery = () => {
       </ul>
       <Modal size="xl" show={show} onHide={handleClose}>
         <Modal.Header className="text-center" closeButton>
-<Row className="w-100">
+          <Row className="w-100">
             <Col xs={12}  className="mb-2">
-          <Modal.Title className="title-font">{project.name}</Modal.Title>
+              <a href={project.url}><Modal.Title className="title-font">{project.name}</Modal.Title></a>
             </Col>
-            <Col 
-xs={12} 
-            >
-          {project.tags
-            ? project.tags.map((language) => fillChips(language))
-            : null}
+            <Col xs={12}>
+              {project.tags
+                ? project.tags.map((language) => fillChips(language))
+                : null}
             </Col>
           </Row>
-       </Modal.Header>
+        </Modal.Header>
         <Modal.Body>
           <Row>
             <Col xs={12} sm={12} md={5} className="mb-4">
@@ -98,7 +97,7 @@ xs={12}
             </Col>
             <Col
               className="paragraph-font"
-                                                                                                        xs={12} sm={12} md={7}
+              xs={12} sm={12} md={7}
               dangerouslySetInnerHTML={{ __html: project.description }}
             ></Col>
           </Row>
