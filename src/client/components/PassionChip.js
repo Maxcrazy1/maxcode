@@ -92,6 +92,70 @@ export default function PassionChip() {
     },
     {
       color: "primary",
+      label: "PHP 5/7/8",
+      image: (
+        <Avatar
+          alt="PHP"
+          src="https://image.flaticon.com/icons/png/128/919/919830.png"
+        />
+      ),
+    },    {
+      color: "primary",
+      label: "GIT",
+      image: (
+        <Avatar
+          alt="Git"
+          src="https://justcodeit.io/wp-content/uploads/Git_icon.svg_.png"
+        />
+      ),
+    },    
+    {
+      color: "primary",
+      label: "JavaScript",
+      image: (
+        <Avatar
+          alt="Vim"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL7p-wTJo37FnB7iR2KkkeQAt-B0sRQWit9pN9O2lzUE8FUKbYjwpA_1TUFs3tK5TmspY&usqp=CAU"
+        />
+      ),
+    },
+    {
+      color: "primary",
+      label: "Jquery",
+      image: (
+        <Avatar
+          alt="Jquery"
+          src="https://es.seaicons.com/wp-content/uploads/2015/06/jquery-icon.png"
+        />
+      ),
+    },
+
+    {
+      color: "primary",
+      label: "Firebase",
+      image: (
+        <Avatar
+          alt="Firebase"
+          src="https://gblobscdn.gitbook.com/spaces%2F-LKIOWqKtRm-4MEjeGPb%2Favatar.png?alt=media"
+        />
+      ),
+    },
+
+
+    {
+      color: "primary",
+      label: "October / Laravel",
+      image: (
+        <Avatar
+          alt="October"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/OctoberCMS.png/220px-OctoberCMS.png"
+        />
+      ),
+    },
+
+
+    {
+      color: "primary",
       label: "Vim",
       image: (
         <Avatar

@@ -56,11 +56,14 @@ const About = () => {
                   <ReactTypingEffect
                     data-aos="fade-up"
                     className={classes.titleFont}
+                    speed={60}
+                    eraseSpeed={70}
+                    typingDelay={500}
                     text={[
                       "Siempre buscando mi siguiente nivel 🐺🏅",
                       "Enamorado del clean code 😍✒️",
-                      "100% fan del deporte 🚵🏀⚽🕺🏽",
-                      "Soy Cristian Serrano 🤡👾👽🤙🏾",
+                      "100% fan del deporte 🚵🏀⚽🕺",
+                      "Soy Cristian Serrano 🤡👾👽🤙",
                     ]}
                   />
                   <Typography data-aos="slide-right" className={classes.textDescription}>

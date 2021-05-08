@@ -81,7 +81,7 @@ const Gallery = () => {
         <Modal.Header className="text-center" closeButton>
           <Row className="w-100">
             <Col xs={12}  className="mb-2">
-              <a href={project.url}><Modal.Title className="title-font">{project.name}</Modal.Title></a>
+              <a  target="_blank" href={project.url}><Modal.Title className="title-font">{project.name}</Modal.Title></a>
             </Col>
             <Col xs={12}>
               {project.tags
