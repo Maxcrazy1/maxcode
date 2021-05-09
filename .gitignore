@@ -26,3 +26,4 @@ src/.fuse*
 *swp*
 
 package-lock.json
+.eslintcache
