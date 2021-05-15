@@ -49,10 +49,10 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: "2rem",
     },
   },
-  textDescription:{
+  textDescription: {
     fontFamily: "Kollektif",
-      marginTop: "1.5rem",
-    fontSize:"18px"
+    marginTop: "1.5rem",
+    fontSize: "18px",
   },
 }));
 
@@ -99,9 +99,17 @@ const Contact = () => {
                       Comunicate conmigo
                     </Typography>
                   </div>
-                  <Typography className={classes.textDescription}  data-aos="fade-up">
-Para mi sería un placer ayudarte a desarrollar tus ideas 🧠📲, comparte tus necesidades conmigo, a través de cualquiera de los medios presentados en el recuadro, cuando tenga un momento disponible responderé tu mensaje 📨 y podremos analizar como dar con una solución ideal para todos 😃✅🌠
-		</Typography>
+                  <Typography
+                    className={classes.textDescription}
+                    data-aos="fade-up"
+                  >
+                    Para mi sería un placer ayudarte a desarrollar tus ideas
+                    🧠📲, comparte tus necesidades conmigo, a través de
+                    cualquiera de los medios presentados en el recuadro, cuando
+                    tenga un momento disponible responderé tu mensaje 📨 y
+                    podremos analizar como dar con una solución ideal para todos
+                    😃✅🌠
+                  </Typography>
                 </div>
               </Col>
               <Col

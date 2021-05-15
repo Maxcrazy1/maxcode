@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import ProjectService from "../../services/Project";
-import ModalProject from "./ModalProject"
+import ModalProject from "./ModalProject";
 import Loading from "./Loading";
 import marked from "marked";
+import { Img } from "react-image";
+import Skeleton from '@material-ui/lab/Skeleton';
 import "../styles/gallery.css";
 import "../styles/helpers.css";
-
-
 
 const Gallery = () => {
   const [project, setProject] = useState([]);
@@ -58,10 +58,12 @@ const Gallery = () => {
               }`}
             >
               <a href="/#" onClick={(e) => setModalProject(project)}>
-                <img
+
+                <Img
                   src={project.image}
                   alt={project.name}
                   className="w-100 h-100 img-cover"
+                  loader={<Skeleton  className="w-100 h-100 img-cover"/>}
                 />
                 <div className="box_data">
                   <span>{project.name}</span>
@@ -73,7 +75,7 @@ const Gallery = () => {
           <Loading />
         )}
       </ul>
-      <ModalProject show={show} project={project} handleClose={handleClose}/>
+      <ModalProject show={show} project={project} handleClose={handleClose} />
     </div>
   );
 };

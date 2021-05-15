@@ -1,4 +1,5 @@
-import React from "react";
+import React, { Suspense } from "react";
+import { useImage } from "react-image";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import { makeStyles } from "@material-ui/core/styles";
@@ -7,7 +8,8 @@ import Template from "../components/Template";
 import { Row, Col, Container } from "react-bootstrap";
 import PassionChip from "../components/PassionChip";
 import Typography from "@material-ui/core/Typography";
-
+import { Img } from "react-image";
+import CircularProgress from "@material-ui/core/CircularProgress";
 import "../styles/helpers.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -20,21 +22,26 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: "2rem",
     },
   },
-  textDescription:{
+  textDescription: {
     fontFamily: "Kollektif",
-    textAlign: 'center',
-      marginTop: "1.5rem",
-    fontSize:"18px"
+    textAlign: "center",
+    marginTop: "1.5rem",
+    fontSize: "18px",
   },
   titleFont: {
     textTransform: "uppercase",
-    opacity: '1 !important',
+    opacity: "1 !important",
     fontFamily: "Norwester",
     fontSize: "30px",
     [theme.breakpoints.down("xs")]: {
       fontSize: "20px",
     },
   },
+  loaderCenter:{
+    position: "absolute",
+    top: "50%",
+    left: "50%"
+}
 }));
 
 AOS.init();
@@ -45,7 +52,7 @@ const About = () => {
       <Template
         RenderComponent={
           <Container fluid>
-            <Row className="h-100">
+            <Row className="">
               <Col
                 xs={12}
                 sm={12}
@@ -66,21 +73,30 @@ const About = () => {
                       "Soy Cristian Serrano 🤡👾👽🤙",
                     ]}
                   />
-                  <Typography data-aos="slide-right" className={classes.textDescription}>
-                    Me he vuelto un aficionado del código desde hace unos cuantos años atras, lo que me ha impulsado a enfretarme a muchos desafios 🤔,
-                    sin embargo siempre tomo en cuenta una frase: "Algún día diré: 'estuvo complejo, pero lo logré'". En mi viaje 🛫 seguiran habiendo muchos peldaños que seguir subiendo, aún así lo hago con animo 🤩💪, porque me encanta desarrollar aplicaciones, sistemas y soluciones modulares, prolijas y escalables ✅💻📱</Typography>
+                  <Typography
+                    data-aos="slide-right"
+                    className={classes.textDescription}
+                  >
+                    Me he vuelto un aficionado del código desde hace unos
+                    cuantos años atras, lo que me ha impulsado a enfretarme a
+                    muchos desafios 🤔, sin embargo siempre tomo en cuenta una
+                    frase: "Algún día diré: 'estuvo complejo, pero lo logré'".
+                    En mi viaje 🛫 seguiran habiendo muchos peldaños que seguir
+                    subiendo, aún así lo hago con animo 🤩💪, porque me encanta
+                    desarrollar aplicaciones, sistemas y soluciones modulares,
+                    prolijas y escalables ✅💻📱
+                  </Typography>
 
                   <div data-aos="slide-right" className="text-center mt-4">
                     <PassionChip />
                   </div>
                 </div>
               </Col>
-              <Col xs={12} sm={12} md={5} className="p-0 h-100">
-                <img
-                  alt="about"
-                  data-aos="slide-left"
-                  className="w-100 h-100 img-cover"
+              <Col xs={12} sm={12} md={5} className="p-0">
+              <Img
                   src="https://source.unsplash.com/QXDJGPZTwxs"
+                  alt="mobile"
+                  loader={<CircularProgress className={classes.loaderCenter} />}
                 />
               </Col>
             </Row>

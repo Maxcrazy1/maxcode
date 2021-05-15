@@ -34,11 +34,9 @@ const useStyles = makeStyles((theme) => ({
     borderWidth: "7px",
     borderImage: "conic-gradient(#08d9d6,#ff2e63,#08d9d6) 1",
     [theme.breakpoints.down("xs")]: {
-      marginBottom: '5rem',
+      marginBottom: "5rem",
     },
-
   },
- 
 }));
 
 export default function CustomizedTimeline() {
@@ -49,15 +47,21 @@ export default function CustomizedTimeline() {
       <TimelineItem>
         <TimelineOppositeContent>
           <Typography variant="body2" color="textSecondary">
-          👨‍💻💎
+            👨‍💻💎
           </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineDot>
-            <Avatar
-              alt="Linkedin"
-              src="https://www.grupatra.org/wp-content/uploads/2020/05/icon-linkedin.png"
-            />
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/serranocristian/"
+            >
+              <Avatar
+                alt="Linkedin"
+                src="https://www.grupatra.org/wp-content/uploads/2020/05/icon-linkedin.png"
+              />
+            </a>
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
@@ -76,7 +80,7 @@ export default function CustomizedTimeline() {
                 Linkedin
               </Typography>
             </a>
-            <Typography >Comunicación con empresas 🏢</Typography>
+            <Typography>Comunicación con empresas 🏢</Typography>
           </Paper>
         </TimelineContent>
       </TimelineItem>
@@ -88,10 +92,17 @@ export default function CustomizedTimeline() {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineDot color="primary">
-            <Avatar
-              alt="Freelancer"
-              src="https://pbs.twimg.com/profile_images/771214542231568387/UHj3IdCU_400x400.jpg"
-            />
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.freelancer.com/u/serranocristian9"
+            >
+              {" "}
+              <Avatar
+                alt="Freelancer"
+                src="https://pbs.twimg.com/profile_images/771214542231568387/UHj3IdCU_400x400.jpg"
+              />
+            </a>
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
@@ -110,20 +121,28 @@ export default function CustomizedTimeline() {
                 Free
               </Typography>
             </a>
-            <Typography >Guía y apoyo 👨‍💻🔥</Typography>
+            <Typography>Guía y apoyo 👨‍💻🔥</Typography>
           </Paper>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent>
-          <Typography variant="body2" color="textSecondary">Doing us 🤝</Typography>
+          <Typography variant="body2" color="textSecondary">
+            Doing us 🤝
+          </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineDot color="primary" variant="outlined">
-            <Avatar
-              alt="Workana"
-              src="https://pbs.twimg.com/profile_images/1212755512749625352/XKvflqnf_400x400.jpg"
-            />
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.workana.com/freelancer/cb5160fa0f884e46a21e7c1ac0e81e54"
+            >
+              <Avatar
+                alt="Workana"
+                src="https://pbs.twimg.com/profile_images/1212755512749625352/XKvflqnf_400x400.jpg"
+              />
+            </a>
           </TimelineDot>
           <TimelineConnector className={classes.secondaryTail} />
         </TimelineSeparator>
@@ -159,16 +178,19 @@ export default function CustomizedTimeline() {
         </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
-	  <a 
+            <a
               target="_blank"
               rel="noopener noreferrer"
-	  href="https://mail.google.com/mail/?view=cm&fs=1&to=serranocristian9@gmail.com&su=Un proyecto o solución a desarrollar 🚀&body=Indique sus requerimientos&"><Typography
-	  className={classes.colorTitleCard}
-	  variant="h6"
-	  component="h1"
-	  >
-	  Gmail
-	  </Typography></a>
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=serranocristian9@gmail.com&su=Un proyecto o solución a desarrollar 🚀&body=Indique sus requerimientos&"
+            >
+              <Typography
+                className={classes.colorTitleCard}
+                variant="h6"
+                component="h1"
+              >
+                Gmail
+              </Typography>
+            </a>
             <Typography>El clasico email 💎</Typography>
           </Paper>
         </TimelineContent>
@@ -188,9 +210,7 @@ export default function CustomizedTimeline() {
             >
               Mis opciones
             </Typography>
-            <Typography>
-              ¡Hablemos por alguna de ellas!
-            </Typography>
+            <Typography>¡Hablemos por alguna de ellas!</Typography>
           </Paper>
         </TimelineContent>
       </TimelineItem>
