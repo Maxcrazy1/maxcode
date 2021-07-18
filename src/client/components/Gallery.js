@@ -76,7 +76,7 @@ const Gallery = () => {
   const setItemsToCarousel = (index) => {
     return projects.length > 0 ? (
       projects[index].map((project) => (
-        <div>
+        <div key={project.key}>
           <a href="/#" onClick={(e) => setModalProject(project)}>
             <Img
               src={project.image}
@@ -105,24 +105,32 @@ const Gallery = () => {
 
   const classes = useStyles();
   return (
+
     <div>
       <ul className="gallery_box">
-        {higlightProjects.map((highLightproject, index) => (
+        {higlightProjects.map((index) => (
           <li
-            key={highLightproject.key}
+            key={index}
             className={`${index === 4 ? "height-top" : ""} ${
               index === 1 ? "short-height" : ""
             }`}
           >
-            <Carousel
-              infiniteLoop={true}
-              autoPlay={true}
-              showIndicators={false}
-              showStatus={false}
-              showArrows={true}
-            >
-              {setItemsToCarousel(index)}
-            </Carousel>
+            {projects.length > 0 ? (
+              <Carousel
+                infiniteLoop
+                autoPlay
+                stopOnHover
+                interval={3500}
+                showIndicators={false}
+                showStatus={false}
+                showArrows={true}
+                key={index}
+              >
+                {setItemsToCarousel(index)}
+              </Carousel>
+            ) : (
+              <Loading />
+            )}
           </li>
         ))}
       </ul>
