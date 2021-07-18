@@ -14,7 +14,7 @@ const useStyles = makeStyles(() => ({
     MozTransition: "margin .25s ease-out",
     OTransition: "margin .25s ease-out",
     transition: "margin .25s ease-out",
-    position: "absolute",
+    position: "fixed",
     backgroundColor: "#252a34",
     zIndex: 1,
   },

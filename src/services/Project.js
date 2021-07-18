@@ -5,6 +5,10 @@ const getAll = () => {
   return db;
 };
 
+const getWithLimit = (limit) => {
+  return db.limitToLast(limit);
+};
+
 const create = (data) => {
   return db.push(data);
 };
@@ -23,6 +27,7 @@ const removeAll = () => {
 
 export default {
   getAll,
+  getWithLimit,
   create,
   update,
   remove,
