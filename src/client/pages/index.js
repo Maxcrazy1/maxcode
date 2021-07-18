@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Home = () => {
   useEffect(() =>{
-    toast(<div>React & Firebase 🔥<br /> Desarrollado con 💙 <small>by Max {new Date().getFullYear()}</small></div>, {
+    toast(<div>React 🌀 Firebase 🔥<br /> Desarrollado con 💙 <small>by Cristian S {new Date().getFullYear()}</small></div>, {
       position: "top-right",
       autoClose: 5000, 
       hideProgressBar: false,
