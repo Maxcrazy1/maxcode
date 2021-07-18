@@ -76,7 +76,7 @@ const Gallery = () => {
   const setItemsToCarousel = (index) => {
     return projects.length > 0 ? (
       projects[index].map((project) => (
-        <div key={project.key}>
+        <div className="h-100" key={project.key}>
           <a href="/#" onClick={(e) => setModalProject(project)}>
             <Img
               src={project.image}

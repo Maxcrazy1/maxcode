@@ -111,11 +111,11 @@ const AboutThirdRow = () => {
             <Row>
               <Col className="text-center" xs={12} md={6}>
                 <Typography>Español</Typography>
-                <CircularProgressWithLabel value={100} />;
+                <CircularProgressWithLabel value={100}/>
               </Col>
               <Col className="text-center" xs={12} md={6}>
                 <Typography>Ingles</Typography>
-                <CircularProgressWithLabel value={50} />;
+                <CircularProgressWithLabel value={50}/>
               </Col>
             </Row>
           </CardContent>
