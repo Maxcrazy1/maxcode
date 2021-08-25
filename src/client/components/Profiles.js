@@ -197,20 +197,30 @@ export default function CustomizedTimeline() {
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineDot color="secondary">
-            <RepeatIcon />
+<TimelineDot color="textSecondary">
+            <Avatar
+              alt="Github"
+              src="https://cdn.iconscout.com/icon/free/png-256/github-163-761603.png"
+            />
           </TimelineDot>
         </TimelineSeparator>
+
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
-            <Typography
-              className={classes.colorTitleCard}
-              variant="h6"
-              component="h1"
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/Maxcrazy1"
             >
-              Mis opciones
-            </Typography>
-            <Typography>¡Hablemos por alguna de ellas!</Typography>
+              <Typography
+                className={classes.colorTitleCard}
+                variant="h6"
+                component="h1"
+              >
+                Github
+              </Typography>
+            </a>
+            <Typography>Mis repositorios 📚💻</Typography>
           </Paper>
         </TimelineContent>
       </TimelineItem>
