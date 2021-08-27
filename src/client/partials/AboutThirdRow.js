@@ -81,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 const AboutThirdRow = () => {
-	
+
   const classes = useStyles();
   return (
     <React.Fragment>
@@ -110,12 +110,12 @@ const AboutThirdRow = () => {
 
             <Row>
               <Col className="text-center" xs={12} md={6}>
-                <Typography>Español</Typography>
+                <Typography>Español Nativo</Typography>
                 <CircularProgressWithLabel value={100}/>
               </Col>
               <Col className="text-center" xs={12} md={6}>
-                <Typography>Ingles</Typography>
-                <CircularProgressWithLabel value={50}/>
+                <Typography>Ingles A2-B1</Typography>
+                <CircularProgressWithLabel value={'50'}/>
               </Col>
             </Row>
           </CardContent>
@@ -134,7 +134,7 @@ const AboutThirdRow = () => {
             </Typography>
 
             <Row>
-              <Col className="text-center" xs={12} md={6}>
+              <Col className="text-center" xs={12} md={4}>
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
@@ -150,7 +150,7 @@ const AboutThirdRow = () => {
                   </Typography>
                 </a>
               </Col>
-              <Col className="text-center" xs={12} md={6}>
+              <Col className="text-center" xs={12} md={4}>
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
@@ -163,6 +163,22 @@ const AboutThirdRow = () => {
                   />
                   <Typography color="textSecondary" className>
                     Workana
+                  </Typography>
+                </a>
+              </Col>
+              <Col className="text-center" xs={12} md={4}>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.workana.com/freelancer/cb5160fa0f884e46a21e7c1ac0e81e54"
+                >
+                  <Avatar
+                    alt="Linkedin"
+                    src="https://www.svgrepo.com/show/303299/linkedin-icon-2-logo.svg"
+                    className={classes.large}
+                  />
+                  <Typography color="textSecondary" className>
+                    Linkedin
                   </Typography>
                 </a>
               </Col>

@@ -14,6 +14,15 @@ const Home = () => {
       pauseOnHover: true, 
       draggable: true,
     });
+    toast(<div>Mis proyectos más recientes, presione sobre alguna imagen para ver más detalles 💻🧐</div>, {
+      position: "top-right",
+      autoClose: 7000, 
+      hideProgressBar: false,
+      closeOnClick: true, 
+      pauseOnHover: true, 
+      draggable: true,
+    });
+ 
   })
   return (
     <React.Fragment>

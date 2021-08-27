@@ -91,7 +91,7 @@ const AboutFirstRow = () => {
         >
           <Avatar
             alt="Cristian Serrano"
-            src="https://cdn3.f-cdn.com/ppic/132863215/logo/23955762/QnRA0/profile_logo_.jpeg"
+            src="https://cdn5.f-cdn.com/ppic/173745971/logo/23955762/IwVHg/profile_logo_RJBWG_ebcd036a0db50db993ae98ce380f6419.png"
           />{" "}
         </StyledBadge>
         <div>
@@ -115,9 +115,13 @@ const AboutFirstRow = () => {
         <div className={classes.contentDescription}>
           <Typography className={classes.textDescription}>
             Me he vuelto un aficionado del código desde hace unos cuantos años
-            atras, lo que me ha impulsado a enfretarme a muchos desafios 🤔, sin
-            embargo siempre tomo en cuenta una frase: "Algún día diré: 'estuvo
-            complejo, pero lo logré'". En mi viaje 🛫 seguiran habiendo muchos
+            atras, me considero proactivo y curioso, me gusta aprender y mejorar 📚, si trabajo solo me esfuerzo 
+            por aplicar los mejores estandares en el proyecto, y si estoy en equipo me gusta oír, ver y aplicar 
+            para seguir puliendo y mejorando mis conocimientos y así ser un apoyo 
+            en las necesidades de la empresa o el equipo. 🤝✨
+            <br></br>
+            <br></br>
+            En mi viaje 🛫 seguiran habiendo muchos
             peldaños que seguir subiendo, aún así lo hago con animo 🤩💪, porque
             me encanta desarrollar aplicaciones, sistemas y soluciones
             modulares, prolijas y escalables ✅💻📱

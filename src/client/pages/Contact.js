@@ -83,7 +83,7 @@ const Contact = () => {
                     >
                       <Avatar
                         alt="Cristian Serrano"
-                        src="https://cdn3.f-cdn.com/ppic/132863215/logo/23955762/QnRA0/profile_logo_.jpeg"
+                        src="https://cdn5.f-cdn.com/ppic/173745971/logo/23955762/IwVHg/profile_logo_RJBWG_ebcd036a0db50db993ae98ce380f6419.png"
                         style={{
                           width: "60px",
                           height: "60px",
