@@ -111,7 +111,7 @@ const AboutFirstRow = () => {
         </div>
       </Col>
 
-      <Col xs={12} sm={12} md={8}>
+      <Col className="mb-4" xs={12} sm={12} md={8}>
         <div className={classes.contentDescription}>
           <Typography className={classes.textDescription}>
             Me he vuelto un aficionado del código desde hace unos cuantos años
