@@ -103,7 +103,7 @@ const AboutFirstRow = () => {
             typingDelay={500}
             text={[
               "Siempre buscando mi siguiente nivel 🐺🏅",
-              "Enamorado del clean code 😍✒️",
+              "Enamorado del clean code y el TDD 😍✒️",
               "100% fan del deporte 🚵🏀⚽🕺",
               "Soy Cristian Serrano 🤡👾👽🤙",
             ]}
