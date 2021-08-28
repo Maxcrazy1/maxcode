@@ -122,7 +122,7 @@ const AboutThirdRow = () => {
         </Card>
       </Col>
 
-      <Col xs={12} sm={12} md={6} className="mt-4">
+      <Col xs={12} sm={12} md={6} className="mt-4 mb-4">
         <Card>
           <CardContent>
             <Typography
