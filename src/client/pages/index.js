@@ -8,15 +8,15 @@ const Home = () => {
   useEffect(() =>{
     toast(<div>React 🌀 Firebase 🔥<br /> Desarrollado con 💙 <small>by Cristian S {new Date().getFullYear()}</small></div>, {
       position: "top-right",
-      autoClose: 5000, 
+      autoClose: 8000, 
       hideProgressBar: false,
       closeOnClick: true, 
       pauseOnHover: true, 
       draggable: true,
     });
-    toast(<div>Mis proyectos más recientes, presione sobre alguna imagen para ver más detalles 💻🧐</div>, {
+    toast(<div>Mis proyectos más recientes, presione sobre alguna imagen para ver más detalles 🖱️🧐</div>, {
       position: "top-right",
-      autoClose: 7000, 
+      autoClose: 15000, 
       hideProgressBar: false,
       closeOnClick: true, 
       pauseOnHover: true, 

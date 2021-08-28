@@ -90,7 +90,7 @@ const useStyles = makeStyles((theme) => ({
     objectPosition: "center center",
   },
   h100: {
-    height: 100,
+    height: "100% !important",
   },
 }));
 
