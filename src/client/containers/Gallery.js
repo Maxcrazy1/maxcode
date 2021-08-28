@@ -1,25 +1,14 @@
 import React, { useState, useEffect } from "react";
 import ProjectService from "../../services/Project";
-import ModalProject from "./ModalProject";
-import Loading from "./Loading";
+import ModalProject from "../components/Gallery/ModalProject";
+import Loading from "../components/Loading";
 import marked from "marked";
 import { Img } from "react-image";
 import Skeleton from "@material-ui/lab/Skeleton";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import "../styles/gallery.css";
-import "../styles/helpers.css";
-import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles((theme) => ({
-  "@global": {
-    body: {
-      overflow: "hidden",
-    },
-  },
-}));
-
-const Gallery = () => {
+const Gallery = ({classes}) => {
   const [project, setProject] = useState([]);
   const [higlightProjects] = useState([0, 1, 2, 3, 4, 5]);
   const [projects, setProjects] = useState([]);
@@ -76,16 +65,16 @@ const Gallery = () => {
   const setItemsToCarousel = (index) => {
     return projects.length > 0 ? (
       projects[index].map((project) => (
-        <div className="h-100" key={project.key}>
+        <div className={classes.h100} key={project.key}>
           <a href="/#" onClick={(e) => setModalProject(project)}>
             <Img
               src={project.image}
               alt={project.name}
-              className="w-100 h-100 img-cover"
-              loader={<Skeleton className="w-100 h-100 img-cover" />}
+              className={classes.imgCover}
+              loader={<Skeleton className={classes.imgCover} />}
             />
-            <div className="box_data">
-              <span>{project.name}</span>
+            <div className={classes.boxData}>
+              <span className={classes.boxDataSpan} >{project.name}</span>
             </div>
           </a>
         </div>
@@ -104,17 +93,14 @@ const Gallery = () => {
     };
   });
 
-  const classes = useStyles();
   return (
 
     <div>
-      <ul className="gallery_box">
+      <ul className={classes.gallery}>
         {higlightProjects.map((index) => (
           <li
             key={index}
-            className={`${index === 4 ? "height-top" : ""} ${
-              index === 1 ? "short-height" : ""
-            }`}
+            className={`${index === 1 ? classes.shortHeight:''}${index === 4 ? classes.heightTop: ''}`}
           >
             {projects.length > 0 ? (
               <Carousel

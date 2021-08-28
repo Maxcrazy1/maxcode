@@ -3,7 +3,7 @@ import { Modal, Row, Col } from "react-bootstrap";
 import Chip from "@material-ui/core/Chip";
 import { Img } from "react-image";
 import Skeleton from "@material-ui/lab/Skeleton";
-import "../styles/helpers.css";
+import "../../styles/helpers.css";
 
 const fillChips = (language) => {
   return (

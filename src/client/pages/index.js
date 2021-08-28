@@ -1,6 +1,6 @@
 import React,{ useEffect} from "react";
 import Template from "../components/Template";
-import Gallery from "../components/Gallery";
+import Gallery from "../components/Gallery/";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 

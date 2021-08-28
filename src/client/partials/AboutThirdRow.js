@@ -114,7 +114,7 @@ const AboutThirdRow = () => {
                 <CircularProgressWithLabel value={100}/>
               </Col>
               <Col className="text-center" xs={12} md={6}>
-                <Typography>Ingles A2-B1</Typography>
+                <Typography>Ingles A2 - B1</Typography>
                 <CircularProgressWithLabel value={'50'}/>
               </Col>
             </Row>
