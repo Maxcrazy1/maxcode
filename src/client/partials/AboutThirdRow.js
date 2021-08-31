@@ -75,6 +75,16 @@ const useStyles = makeStyles((theme) => ({
   leftAlignTimeLine: {
     width: 0,
   },
+  textCenter: {
+    textAlign:'center'
+  },
+  mt4:{
+    marginTop:"2rem"
+  },
+  mtb4:{
+    marginTop:"2rem",
+    marginBottom:"2rem",
+  }
 }));
 
 
@@ -86,7 +96,7 @@ const AboutThirdRow = () => {
   return (
     <React.Fragment>
       <Col xs={12} sm={12} md={6}>
-        <Card className="mt-4">
+        <Card className={classes.mt4}>
           <Typography
             className={classes.titleCard}
             color="textSecondary"
@@ -94,11 +104,11 @@ const AboutThirdRow = () => {
           >
             Hobbies e Intereses
           </Typography>
-          <CardContent className="text-center">
+          <CardContent className={classes.textCenter}>
             <PassionChip />
           </CardContent>
         </Card>
-        <Card className="mt-4">
+        <Card className={classes.mt4}>
           <CardContent>
             <Typography
               className={classes.titleCard}
@@ -109,20 +119,20 @@ const AboutThirdRow = () => {
             </Typography>
 
             <Row>
-              <Col className="text-center" xs={12} md={6}>
+              <Col className={classes.textCenter} xs={12} md={6}>
                 <Typography>Español Nativo</Typography>
                 <CircularProgressWithLabel value={100}/>
               </Col>
-              <Col className="text-center" xs={12} md={6}>
+              <Col className={classes.textCenter} xs={12} md={6}>
                 <Typography>Ingles A2 - B1</Typography>
-                <CircularProgressWithLabel value={'50'}/>
+                <CircularProgressWithLabel value={50}/>
               </Col>
             </Row>
           </CardContent>
         </Card>
       </Col>
 
-      <Col xs={12} sm={12} md={6} className="mt-4 mb-4">
+      <Col xs={12} sm={12} md={6} className={classes.mtb4}>
         <Card>
           <CardContent>
             <Typography
@@ -134,7 +144,7 @@ const AboutThirdRow = () => {
             </Typography>
 
             <Row>
-              <Col className="text-center" xs={12} md={4}>
+              <Col className={classes.textCenter} xs={12} md={4}>
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
@@ -150,7 +160,7 @@ const AboutThirdRow = () => {
                   </Typography>
                 </a>
               </Col>
-              <Col className="text-center" xs={12} md={4}>
+              <Col className={classes.textCenter} xs={12} md={4}>
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
@@ -166,7 +176,7 @@ const AboutThirdRow = () => {
                   </Typography>
                 </a>
               </Col>
-              <Col className="text-center" xs={12} md={4}>
+              <Col className={classes.textCenter} xs={12} md={4}>
                 <a
                   target="_blank"
                   rel="noopener noreferrer"

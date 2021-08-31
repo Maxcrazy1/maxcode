@@ -71,13 +71,27 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "20px",
     },
   },
+  mb4:{
+    marginBottom:"2rem",
+  },
+  mb4AndCenter:{
+    marginBottom:"2rem",
+    textAlign:"center"
+  },
+  textCenter:{
+    textAlign:"center"
+  },
+  mxAuto:{
+    marginLeft:"auto",
+    marginRight:"auto"
+  }
 }));
 
 const AboutFirstRow = () => {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <Col xs={12} sm={12} md={12} className="mb-4">
+      <Col xs={12} sm={12} md={12} className={ classes.mb4 }>
         <Typography variant="h2" className={classes.titleMain} gutterBottom>
           Cristian Serrano
         </Typography>
@@ -96,7 +110,6 @@ const AboutFirstRow = () => {
         </StyledBadge>
         <div>
           <ReactTypingEffect
-            data-aos="fade-up"
             className={classes.titleFont}
             speed={60}
             eraseSpeed={70}
@@ -111,7 +124,7 @@ const AboutFirstRow = () => {
         </div>
       </Col>
 
-      <Col className="mb-4" xs={12} sm={12} md={8}>
+      <Col className={ classes.mb4 } xs={12} sm={12} md={8}>
         <div className={classes.contentDescription}>
           <Typography className={classes.textDescription}>
             Me he vuelto un aficionado del código desde hace unos cuantos años
@@ -129,7 +142,7 @@ const AboutFirstRow = () => {
         </div>
       </Col>
       <Col xs={12} sm={12} md={4}>
-        <Card className="mb-4">
+        <Card className={ classes.mb4}>
           <CardContent>
             <Row>
               <Col md={12}>
@@ -141,33 +154,33 @@ const AboutFirstRow = () => {
                   Lo que hago
                 </Typography>
               </Col>
-              <Col xs={6} className="text-center mb-4">
+              <Col xs={6} className={classes.mb4AndCenter} >
                 <Avatar
-                  className="mx-auto"
+                  className={classes.mxAuto}
                   alt="icon"
                   src="https://image.flaticon.com/icons/png/128/2210/2210159.png"
                 ></Avatar>
                 <Typography>Desarrollo web</Typography>
               </Col>
-              <Col xs={6} className="text-center mb-4">
+              <Col xs={6} className={classes.mb4AndCenter}>
                 <Avatar
-                  className="mx-auto"
+                  className={classes.mxAuto}
                   alt="icon"
                   src="https://image.flaticon.com/icons/png/128/2920/2920329.png"
                 ></Avatar>
                 <Typography>Desarrollo movíl</Typography>
               </Col>
-              <Col xs={6} className="text-center">
+              <Col xs={6} className={classes.textCenter}>
                 <Avatar
-                  className="mx-auto"
+                  className={classes.mxAuto}
                   alt="icon"
                   src="https://image.flaticon.com/icons/png/128/2752/2752571.png"
                 ></Avatar>
                 <Typography>Desarrollo de escritorio</Typography>
               </Col>
-              <Col xs={6} className="text-center">
+              <Col xs={6} className={classes.textCenter}>
                 <Avatar
-                  className="mx-auto"
+                  className={classes.mxAuto}
                   alt="icon"
                   src="https://image.flaticon.com/icons/png/128/2721/2721305.png"
                 ></Avatar>

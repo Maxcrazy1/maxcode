@@ -8,7 +8,6 @@ import Profiles from "../components/Profiles";
 import Badge from "@material-ui/core/Badge";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import { Row, Col, Container } from "react-bootstrap";
-import "../styles/helpers.css";
 
 const StyledBadge = withStyles((theme) => ({
   badge: {
@@ -54,6 +53,19 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "1.5rem",
     fontSize: "18px",
   },
+  h100: {
+    height: "100%"
+  },
+  mAuto:{
+    marginLeft:"auto",
+    marginRight:"auto",
+    marginBottom:"auto",
+    marginTop:"auto"
+  },
+  titleFont:{
+    fontFamily: "Norwester !important"
+  },
+
 }));
 
 AOS.init();
@@ -63,15 +75,15 @@ const Contact = () => {
     <React.Fragment>
       <Template
         RenderComponent={
-          <Container fluid className="h-100">
-            <Row className="h-100">
+          <Container fluid className={classes.h100}>
+            <Row className={classes.h100}>
               <Col
                 xs={12}
                 sm={12}
                 md={6}
                 className={classes.contentDescription}
               >
-                <div className="m-auto">
+                <div className={classes.mAuto}>
                   <div data-aos="slide-right">
                     <StyledBadge
                       overlap="circle"
@@ -92,7 +104,7 @@ const Contact = () => {
                     </StyledBadge>
 
                     <Typography
-                      className="title-font"
+                      className={classes.titleFont}
                       variant="h2"
                       component="h1"
                     >
@@ -117,7 +129,7 @@ const Contact = () => {
                 sm={12}
                 md={6}
                 data-aos="fade-left"
-                className="m-auto"
+                className={classes.mAuto}
               >
                 <Profiles />
               </Col>

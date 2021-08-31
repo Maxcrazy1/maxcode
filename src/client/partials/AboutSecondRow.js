@@ -66,6 +66,14 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "20px",
     },
   },
+mxAuto:{
+    marginLeft:"auto",
+    marginRight:"auto"
+  },
+  mt4:{
+    marginTop:"2rem"  
+  }
+
 }));
 
 const AboutSecondRow = () => {
@@ -133,7 +141,7 @@ const AboutSecondRow = () => {
             </Timeline>
           </CardContent>
         </Card>
-        <Card className="mt-4">
+        <Card className={classes.mt4}>
           <CardContent>
             <Typography
               className={classes.titleCard}
@@ -237,7 +245,7 @@ const AboutSecondRow = () => {
                   <ListItem>
                     <ListItemAvatar>
                       <Avatar
-                        className="mx-auto"
+                        className={classes.mxAuto}
                         alt="icon"
                         src="https://styles.redditmedia.com/t5_2uakt/styles/communityIcon_fmttas2xiy351.png"
                       ></Avatar>
@@ -255,7 +263,7 @@ const AboutSecondRow = () => {
                   <ListItem>
                     <ListItemAvatar>
                       <Avatar
-                        className="mx-auto"
+                        className={classes.mxAuto}
                         alt="icon"
                         src="https://cdn.iconscout.com/icon/free/png-256/php-99-1175127.png"
                       ></Avatar>
@@ -273,7 +281,7 @@ const AboutSecondRow = () => {
                   <ListItem>
                     <ListItemAvatar>
                       <Avatar
-                        className="mx-auto"
+                        className={classes.mxAuto}
                         alt="icon"
                         src="https://i.pinimg.com/originals/96/b6/6f/96b66fc862b74edd5ad9e89cc7ccdbb0.png"
                       ></Avatar>
@@ -291,7 +299,7 @@ const AboutSecondRow = () => {
                   <ListItem>
                     <ListItemAvatar>
                       <Avatar
-                        className="mx-auto"
+                        className={classes.mxAuto} 
                         alt="icon"
                         src="https://cdn.iconscout.com/icon/free/png-256/ruby-226055.png"
                       ></Avatar>
@@ -309,7 +317,7 @@ const AboutSecondRow = () => {
                   <ListItem>
                     <ListItemAvatar>
                       <Avatar
-                        className="mx-auto"
+                        className={classes.mxAuto}
                         alt="icon"
                         src="https://cdn.iconscout.com/icon/free/png-256/firebase-1-282796.png"
                       ></Avatar>
@@ -327,7 +335,7 @@ const AboutSecondRow = () => {
                   <ListItem>
                     <ListItemAvatar>
                       <Avatar
-                        className="mx-auto"
+                        className={classes.mxAuto}
                         alt="icon"
                         src="https://justcodeit.io/wp-content/uploads/Git_icon.svg_.png"
                       ></Avatar>
@@ -345,7 +353,7 @@ const AboutSecondRow = () => {
                   <ListItem>
                     <ListItemAvatar>
                       <Avatar
-                        className="mx-auto"
+                        className={classes.mxAuto}
                         alt="icon"
                         src="https://icon-library.com/images/terminal-icon/terminal-icon-1.jpg"
                       ></Avatar>
@@ -363,7 +371,7 @@ const AboutSecondRow = () => {
                   <ListItem>
                     <ListItemAvatar>
                       <Avatar
-                        className="mx-auto"
+                        className={classes.mxAuto}
                         alt="icon"
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Vimlogo.svg/1022px-Vimlogo.svg.png"
                       ></Avatar>
@@ -381,7 +389,7 @@ const AboutSecondRow = () => {
                   <ListItem>
                     <ListItemAvatar>
                       <Avatar
-                        className="mx-auto"
+                        className={classes.mxAuto}
                         alt="icon"
                         src="https://image.flaticon.com/icons/png/512/919/919844.png"
                       ></Avatar>
@@ -400,7 +408,7 @@ const AboutSecondRow = () => {
                   <ListItem>
                     <ListItemAvatar>
                       <Avatar
-                        className="mx-auto"
+                        className={classes.mxAuto}
                         alt="icon"
                         src="https://cdn.iconscout.com/icon/free/png-256/react-1-282599.png"
                       ></Avatar>
@@ -419,7 +427,7 @@ const AboutSecondRow = () => {
                   <ListItem>
                     <ListItemAvatar>
                       <Avatar
-                        className="mx-auto"
+                        className={classes.mxAuto}
                         alt="icon"
                         src="https://miro.medium.com/max/816/1*mn6bOs7s6Qbao15PMNRyOA.png"
                       ></Avatar>
@@ -437,7 +445,7 @@ const AboutSecondRow = () => {
                   <ListItem>
                     <ListItemAvatar>
                       <Avatar
-                        className="mx-auto"
+                        className={classes.mxAuto}
                         alt="icon"
                         src="https://cdn.iconscout.com/icon/free/png-256/javascript-23-1174949.png"
                       ></Avatar>
@@ -455,7 +463,7 @@ const AboutSecondRow = () => {
                   <ListItem>
                     <ListItemAvatar>
                       <Avatar
-                        className="mx-auto"
+                        className={classes.mxAuto}
                         alt="icon"
                         src="https://uxwing.com/wp-content/themes/uxwing/download/10-brands-and-social-media/tailwind-css.png"
                       ></Avatar>
@@ -475,7 +483,7 @@ const AboutSecondRow = () => {
                   <ListItem>
                     <ListItemAvatar>
                       <Avatar
-                        className="mx-auto"
+                        className={classes.mxAuto} 
                         alt="icon"
                         src="https://miro.medium.com/max/525/1*mrOXGyIa3BlPK80peLmEbA.png"
                       ></Avatar>
