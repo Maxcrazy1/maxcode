@@ -6,6 +6,21 @@ import { Row, Col, Container } from "react-bootstrap";
 import FooterNavbar from "../components/FooterNavbar";
 
 const useStyles = makeStyles(() => ({
+// "@global": {
+// body: {
+// backgroundColor:"#382E7E !important",
+// "&::after":{
+// content: "",
+// position: "absolute",
+// top: "100%",
+// left: 0,
+// height: "20px",
+// width: "100%",
+// backgroundColor: "red"
+// },
+// },
+// },
+
   sidebarWrapper: {
     minHeight: "100vh !important",
     width: "7rem",

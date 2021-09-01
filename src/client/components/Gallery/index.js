@@ -6,7 +6,8 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
   "@global": {
     body: {
-      overflow: "hidden",
+      overflow: "hidden !important",
+
     },
     img: {
       maxWidth: "100%",
