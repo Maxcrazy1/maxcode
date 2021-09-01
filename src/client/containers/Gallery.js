@@ -85,7 +85,6 @@ const Gallery = ({classes}) => {
   };
 
   useEffect(() => {
-    window.scrollTo(0, 0);
     ProjectService.getAll().on("value", setAllProjects);
 
     return () => {

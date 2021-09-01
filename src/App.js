@@ -21,7 +21,6 @@ export default function Dashboard() {
           <Route path="/contact">
             <Contact />
           </Route>
-
           <Route path="/login">
             <Login />
           </Route>

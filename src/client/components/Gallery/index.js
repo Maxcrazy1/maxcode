@@ -5,18 +5,18 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   "@global": {
-    "#root": {
-      overflow: "hidden !important",
+"#root": {
+overflow: "hidden !important",
 
-    },
+},
     img: {
       maxWidth: "100%",
     },
   },
   gallery: {
     padding: 0,
+    marginBottom:0,
     display: "flow-root",
-    height: "100vh",
     "& li:hover img": {
       "-moz-transform": "scale(1.1)",
       "-webkit-transform": "scale(1.1)",

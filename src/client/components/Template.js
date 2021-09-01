@@ -4,23 +4,10 @@ import Sidebar from "./Sidebar";
 import { makeStyles } from "@material-ui/core/styles";
 import { Row, Col, Container } from "react-bootstrap";
 import FooterNavbar from "../components/FooterNavbar";
+import Link from '@material-ui/core/Link';
+import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 
 const useStyles = makeStyles(() => ({
-// "@global": {
-// body: {
-// backgroundColor:"#382E7E !important",
-// "&::after":{
-// content: "",
-// position: "absolute",
-// top: "100%",
-// left: 0,
-// height: "20px",
-// width: "100%",
-// backgroundColor: "red"
-// },
-// },
-// },
-
   sidebarWrapper: {
     minHeight: "100vh !important",
     width: "7rem",
@@ -40,6 +27,25 @@ const useStyles = makeStyles(() => ({
     marginLeft: "3%",
     padding: 0,
   },
+  floatRound:{
+    	position:'fixed',
+	width:'60px',
+	height:'60px',
+	bottom:'40px',
+	right:'40px',
+	backgroundColor:'#25d366',
+	color:'#FFF',
+	borderRadius:'50px',
+	textAlign:'center',
+  fontSize:'30px',
+	boxShadow: '2px 2px 3px #999',
+  zIndex:100,
+  },
+  iconWs:{
+    fontSize:'35px',
+    marginTop:'8px'
+  }
+
 }));
 
 const Template = ({ RenderComponent }) => {
@@ -61,13 +67,23 @@ const Template = ({ RenderComponent }) => {
           <div className={classes.sidebarWrapper}>
             <Sidebar />
           </div>
-          <div className={classes.contentWrapper}>{RenderComponent}</div>
+          <div className={classes.contentWrapper}>{RenderComponent}
+      <Link target="_blank" className={classes.floatRound} href="https://api.whatsapp.com/send?phone=+584241722195&text=Estamos%20interesados%20en%20comunicarnos%20contigo%20%F0%9F%A4%9D">
+        <WhatsAppIcon className={classes.iconWs} />
+      </Link>
+
+
+          </div>
+
         </>
       ) : (
         <Container fluid>
           <Row>
             <Col style={{padding:0}} xs={12}>
               {RenderComponent}
+<Link target="_blank" className={classes.floatRound} href="https://api.whatsapp.com/send?phone=+584241722195&text=Estamos%20interesados%20en%20comunicarnos%20contigo%20%F0%9F%A4%9D">
+        <WhatsAppIcon className={classes.iconWs} />
+      </Link>
               <FooterNavbar />
             </Col>
           </Row>
