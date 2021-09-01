@@ -4,15 +4,15 @@ import DirectionsBikeIcon from "@material-ui/icons/DirectionsBike";
 import StarIcon from "@material-ui/icons/Star";
 import Avatar from "@material-ui/core/Avatar";
 import Chip from "@material-ui/core/Chip";
-import "../styles/chip-fonts.css";
 
 const fillChips = ({ color, label, icon = null, image = null }, index) => {
   return (
     <Chip
-      className="m-1 label-font"
       style={{
         backgroundColor: "#252a34",
         color: "#eaeaea",
+        fontFamily: "Kollektif",
+        margin: 4
       }}
       label={label}
       key={index}
