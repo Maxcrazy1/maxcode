@@ -12,9 +12,7 @@ import TextField from "@material-ui/core/TextField";
 import ProjectService from "../../../services/Project";
 import SaveIcon from "@material-ui/icons/Save";
 import AssignmentTurnedInIcon from "@material-ui/icons/AssignmentTurnedIn";
-import Chip from "@material-ui/core/Chip";
-import Autocomplete from "@material-ui/lab/Autocomplete";
-import Languages from "../../../services/Languages";
+import ChipInput from 'material-ui-chip-input'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -50,7 +48,6 @@ export default function Form() {
   const [url, setUrl] = useState("");
   const [tags, setTags] = useState([]);
   const location = useLocation();
-
   useEffect(() => {
     const setProject = (project) => {
       setName(project.name);
@@ -58,14 +55,18 @@ export default function Form() {
       setImage(project.image);
       setInternalImage(project.internalImage);
       setUrl(project.url);
-      setTags(project.tags);
+      setTags(project.tags.split(","));
       setKeyProject(project.key);
+
+
     };
+
     if (location.state) {
       setProject(location.state.project);
       delete location.state;
     }
   });
+
 
   function handleClick(e) {
     e.preventDefault();
@@ -157,31 +158,15 @@ export default function Form() {
 
             <Grid item xs={12}>
               <FormControl className={classes.fullWidth}>
-                <Autocomplete
-                  multiple
-                  id="tags-filled"
-                  options={Languages.map((language) => language)}
-                  freeSolo
-                  onChange={(event, value) => setTags(value.join(", "))}
-                  renderTags={(value, getTagProps) =>
-                    value.map((option, index) => (
-                      <Chip
-                        variant="outlined"
-                        label={option}
-                        {...getTagProps({ index })}
-                      />
-                    ))
-                  }
-                  renderInput={(params) => (
-                    <TextField
-                      {...params}
-                      variant="filled"
-                      label="Languages"
-                      placeholder="React, Laravel"
-                    />
-                  )}
-                />
-              </FormControl>
+<FormControl className={classes.fullWidth}>
+
+  <ChipInput
+  value={tags}
+  onChange={(chip) => setTags(tags.concat(chip))}
+onDelete={(chip, index) => setTags(tags.splice(chip,index))}
+/>
+             </FormControl>
+            </FormControl>
             </Grid>
             <Grid item xs={12}>
               <FormControl className={classes.fullWidth}>
@@ -212,3 +197,4 @@ export default function Form() {
     </Paper>
   );
 }
+
