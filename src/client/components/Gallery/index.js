@@ -4,15 +4,15 @@ import GalleryContainer from "../../containers/Gallery";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-  "@global": {
+"@global": {
 "#root": {
 overflow: "hidden !important",
 
 },
-    img: {
-      maxWidth: "100%",
-    },
-  },
+img: {
+maxwidth: "100%",
+},
+},
   gallery: {
     padding: 0,
     marginBottom:0,
@@ -34,6 +34,12 @@ overflow: "hidden !important",
     },
     "& li:nth-child(odd)": {
       height: "50vh",
+    },
+    "& li:nth-child(2) .slide": {
+      height: "17rem !important",
+      [theme.breakpoints.down("sm")]: {
+        height: "35vh !important",
+      },
     },
     "& li:nth-child(5) .slide": {
       height: "38rem !important",
