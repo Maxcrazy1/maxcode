@@ -34,6 +34,7 @@ const ModalProject = ({ project, show, handleClose }) => {
             <Img
               src={project.internalImage}
               alt={project.name}
+              className='w-100'
               loader={<Skeleton animation="wave" height="100%" />}
             />
           </Col>
