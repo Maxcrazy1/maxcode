@@ -6,6 +6,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import QuestionAnswerIcon from "@material-ui/icons/QuestionAnswer";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
+import Avatar from "@material-ui/core/Avatar";
 
 const useStyles = makeStyles((theme) => ({
 	sidebar:{
@@ -31,12 +32,33 @@ const useStyles = makeStyles((theme) => ({
     '-ms-transform': 'translateY(-50%)',
     transform: 'translateY(-50%)',
 },
+	verticalTop :{
+    margin: 0,
+    position: 'absolute',
+    top: '4vh',
+    left: '0.7vh',
+    '-ms-transform': 'translateY(-50%)',
+    transform: 'translateY(-50%)',
+},
+	verticalBottom :{
+    margin: 0,
+    position: 'absolute',
+    top: '90vh',
+    left: '0.7vh',
+    '-ms-transform': 'translateY(-50%)',
+    transform: 'translateY(-50%)',
+},
 	mt2:{
 		marginTop: ".5rem !important"
 	},
-
-
-
+	iconHome :{
+		width:"35px",
+		height:"35px"
+	},
+	iconSocial:{
+		width:"30px",
+		height:"30px"
+	}
 }));
 
 	export default function Sidebar() {
@@ -45,6 +67,20 @@ const useStyles = makeStyles((theme) => ({
 		return (
 			<>
 				<Nav className={classes.sidebar} activeKey="/home">
+
+				<div className={classes.verticalTop}>
+					<Tooltip title="Cristian S"><Nav.Item className={classes.mt2}>
+							<Link to="/">
+<Avatar
+	className={classes.iconHome}
+                        alt="icon"
+	src="https://cdn-icons-png.flaticon.com/64/2463/2463510.png"
+                      ></Avatar>
+							</Link>
+						</Nav.Item>
+					</Tooltip>
+					</div>
+
 					<div className={classes.verticalCenter}>
 						<Tooltip title="Quien soy?"><Nav.Item className={classes.mt2} >
 							<Link to="/about">
@@ -61,6 +97,38 @@ const useStyles = makeStyles((theme) => ({
 								<QuestionAnswerIcon style={path==='/contact'?{fill:'#ff2e63'}: {fill: "#08d9d6"} }/>
 							</Link>
 						</Nav.Item></Tooltip>
+					</div>
+					<div className={classes.verticalBottom}>
+<Tooltip title="Perfil de trabajo"><Nav.Item className={classes.mt2}>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/serranocristian/"
+            >
+ 
+<Avatar
+	className={classes.iconSocial}
+                        alt="icon"
+                        src="https://cdn-icons-png.flaticon.com/64/145/145807.png"
+                      ></Avatar>
+							</a>
+						</Nav.Item>
+					</Tooltip>
+<Tooltip title="Repositorios"><Nav.Item className={classes.mt2}>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/Maxcrazy1"
+            >
+ 
+<Avatar
+	className={classes.iconSocial}
+                        alt="icon"
+                        src="https://cdn-icons-png.flaticon.com/64/919/919847.png"
+                      ></Avatar>
+							</a>
+						</Nav.Item>
+					</Tooltip>
 					</div>
 				</Nav>
 			</>
