@@ -44,7 +44,7 @@ export default function Form() {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
-  const [internalImage, setInternalImage] = useState("");
+  const [internalImages, setInternalImages] = useState([]);
   const [url, setUrl] = useState("");
   const [tags, setTags] = useState([]);
   const location = useLocation();
@@ -53,9 +53,9 @@ export default function Form() {
       setName(project.name);
       setDescription(project.description);
       setImage(project.image);
-      setInternalImage(project.internalImage);
+      setInternalImages(project.internalImages ?? []);
       setUrl(project.url);
-      setTags(project.tags.split(","));
+      setTags(project.tags);
       setKeyProject(project.key);
 
 
@@ -94,7 +94,7 @@ export default function Form() {
       name,
       description,
       image,
-      internalImage,
+      internalImages,
       tags,
       url,
     };
@@ -136,13 +136,19 @@ export default function Form() {
             </Grid>
             <Grid item xs={12}>
               <FormControl className={classes.fullWidth}>
-                <TextField
-                  id="url-internal-image"
-                  label="Url Internal Image"
-                  value={internalImage}
-                  onChange={(event) => setInternalImage(event.target.value)}
-                />
-              </FormControl>
+
+  <ChipInput
+  value={internalImages}
+  onChange={(internalImage) => setInternalImages(internalImage)}
+onDelete={(internalImage, index) => setInternalImages(internalImages.splice(internalImage,index))}
+/>
+{/* <TextField */}
+{/* id="url-internal-image" */}
+{/* label="Url Internal Image" */}
+{/* value={internalImage} */}
+{/* onChange={(event) => setInternalImage(event.target.value)} */}
+{/* /> */}
+</FormControl>
             </Grid>
             <Grid item xs={12}>
               <FormControl className={classes.fullWidth}>
@@ -162,7 +168,7 @@ export default function Form() {
 
   <ChipInput
   value={tags}
-  onChange={(chip) => setTags(tags.concat(chip))}
+  onChange={(chip) => setTags(chip)}
 onDelete={(chip, index) => setTags(tags.splice(chip,index))}
 />
              </FormControl>

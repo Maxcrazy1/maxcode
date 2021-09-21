@@ -40,9 +40,9 @@ const Gallery = ({classes}) => {
               name: data.name,
               description: marked(data.description),
               image: data.image,
-              internalImage: data.internalImage,
+              internalImages: data.internalImages,
               url: data.url,
-              tags: data.tags ? data.tags.split(",") : [],
+              tags: data.tags,
             },
           ])
         : (projects[index] = [
@@ -51,9 +51,9 @@ const Gallery = ({classes}) => {
               name: data.name,
               description: marked(data.description),
               image: data.image,
-              internalImage: data.internalImage,
+              internalImages: data.internalImages,
               url: data.url,
-              tags: data.tags ? data.tags.split(",") : [],
+              tags: data.tags,
             },
           ]);
       index = index + 1;
