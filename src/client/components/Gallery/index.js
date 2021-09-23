@@ -36,7 +36,7 @@ maxwidth: "100%",
       height: "50vh",
     },
     "& li:nth-child(2) .slide": {
-      height: "17rem !important",
+      height: "38vh !important",
       [theme.breakpoints.down("sm")]: {
         height: "35vh !important",
       },

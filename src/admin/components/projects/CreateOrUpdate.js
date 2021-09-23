@@ -50,10 +50,11 @@ export default function Form() {
   const location = useLocation();
   useEffect(() => {
     const setProject = (project) => {
+      console.log(project);
       setName(project.name);
       setDescription(project.description);
       setImage(project.image);
-      setInternalImages(project.internalImages ?? []);
+      setInternalImages(project.internalImages);
       setUrl(project.url);
       setTags(project.tags);
       setKeyProject(project.key);

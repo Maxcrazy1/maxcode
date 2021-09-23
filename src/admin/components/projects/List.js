@@ -77,7 +77,7 @@ const ProjectList = () => {
         name: data.name,
         description: data.description,
         image: data.image,
-        internalImage: data.internalImage,
+        internalImages: data.internalImages,
         url: data.url,
         tags:data.tags
       });
