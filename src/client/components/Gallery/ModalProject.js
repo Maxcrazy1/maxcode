@@ -6,6 +6,7 @@ import Skeleton from "@material-ui/lab/Skeleton";
 import "../../styles/helpers.css";
 import { Carousel } from "react-responsive-carousel";
 
+
 const fillChips = (language) => {
   return (
     <Chip className="m-1" key={language} label={language} variant="outlined" />
@@ -13,17 +14,17 @@ const fillChips = (language) => {
 };
 
 const setImagesProject = (image) => {
-  console.log("image",image)
   return (
             <Img
               src={image}
               alt="image project"
-              className='w-100'
+              className="w-100"
               loader={<Skeleton animation="wave" height="100%" />}
             />
  
   );
 };
+
 
 
 const ModalProject = ({ project, show, handleClose }) => {
