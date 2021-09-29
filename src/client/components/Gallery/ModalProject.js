@@ -5,6 +5,7 @@ import { Img } from "react-image";
 import Skeleton from "@material-ui/lab/Skeleton";
 import "../../styles/helpers.css";
 import { Carousel } from "react-responsive-carousel";
+import { makeStyles } from "@material-ui/core/styles";
 
 
 const fillChips = (language) => {
@@ -13,12 +14,12 @@ const fillChips = (language) => {
   );
 };
 
-const setImagesProject = (image) => {
+const setImagesProject = (image,classes) => {
   return (
             <Img
               src={image}
               alt="image project"
-              className="w-100"
+              className={classes.imgCover}
               loader={<Skeleton animation="wave" height="100%" />}
             />
  
@@ -26,15 +27,45 @@ const setImagesProject = (image) => {
 };
 
 
+const useStyles = makeStyles((theme) => ({
+  imgCover: {
+    height: "100%",
+    objectFit: "contain",
+    objectPosition: "center center",
+  },
+  h100: {
+    height: "100% !important",
+  },
+  w100: {
+    width: "100% !important",
+  },
+  textCenter:{
+    textAlign: "center"
+  },
+  titleFont:{
+    fontFamily: 'Norwester !important'
+  },
+  textDescription:{
+    textAlign:"justify",
+    marginBottom: "auto",
+    marginTop: "auto",
+    paddingLeft:"1.5rem",
+    paddingRight:"1.5rem",
+  }
+
+}));
+
+
 
 const ModalProject = ({ project, show, handleClose }) => {
+const classes = useStyles();
   return (
     <Modal size="xl" show={show} onHide={handleClose}>
-      <Modal.Header className="text-center" closeButton>
-        <Row className="w-100">
+      <Modal.Header className={classes.textCenter} closeButton>
+        <Row className={classes.w100}>
           <Col xs={12} className="mb-2">
             <a href={project.url} rel="noreferrer noopener" target="_blank">
-              <Modal.Title className="title-font">{project.name}</Modal.Title>
+              <Modal.Title className={classes.titleFont}>{project.name}</Modal.Title>
             </a>
           </Col>
           <Col xs={12}>
@@ -46,24 +77,24 @@ const ModalProject = ({ project, show, handleClose }) => {
       </Modal.Header>
       <Modal.Body>
         <Row>
-          <Col xs={12} sm={12} md={5} className="mb-4">
+          <Col xs={12} sm={12} md={5}>
             
           <Carousel
-          infiniteLoop
-          autoPlay
+infiniteLoop
+autoPlay
           stopOnHover
           interval={3500}
           showIndicators={false}
           showStatus={false}
           showArrows={true}>
             {project.internalImages
-              ? project.internalImages.map((internalImage) => setImagesProject(internalImage))
+              ? project.internalImages.map((internalImage) => setImagesProject(internalImage,classes))
               : null}
  
          </Carousel>
           </Col>
           <Col
-            className="paragraph-font my-auto px-4 text-justify"
+            className={classes.textDescription}
             xs={12}
             sm={12}
             md={7}
