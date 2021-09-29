@@ -50,7 +50,6 @@ export default function Form() {
   const location = useLocation();
   useEffect(() => {
     const setProject = (project) => {
-      console.log(project);
       setName(project.name);
       setDescription(project.description);
       setImage(project.image);
@@ -78,6 +77,9 @@ export default function Form() {
     }
   }
 
+  const deleteInternalImage = (needle)=>{
+    ;
+  }
   const updateProject = () => {
     ProjectService.update(keyProject, setProject()).then(() => {
       return history.push("/", { message: "Project updated" });
@@ -140,15 +142,10 @@ export default function Form() {
 
   <ChipInput
   value={internalImages}
-  onChange={(internalImage) => setInternalImages(internalImage)}
-onDelete={(internalImage, index) => setInternalImages(internalImages.splice(internalImage,index))}
+  onChange={(internalImage) => setInternalImages([...internalImages,internalImage])}
+    onDelete={(internalImage, index) => setInternalImages(internalImages.filter(image => image !==internalImage))}
 />
-{/* <TextField */}
-{/* id="url-internal-image" */}
-{/* label="Url Internal Image" */}
-{/* value={internalImage} */}
-{/* onChange={(event) => setInternalImage(event.target.value)} */}
-{/* /> */}
+
 </FormControl>
             </Grid>
             <Grid item xs={12}>
