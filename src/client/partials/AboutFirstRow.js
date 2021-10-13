@@ -105,7 +105,7 @@ const AboutFirstRow = () => {
         >
           <Avatar
             alt="Cristian Serrano"
-            src="https://cdn5.f-cdn.com/ppic/173745971/logo/23955762/IwVHg/profile_logo_RJBWG_ebcd036a0db50db993ae98ce380f6419.png"
+            src="https://media-exp1.licdn.com/dms/image/C4E03AQENC12BRsfPFw/profile-displayphoto-shrink_800_800/0/1633815024007?e=1639612800&v=beta&t=zi9atjwaSkPH7IObPqpAK7UhCdCRid_vTfrU-ed5EDU"
           />{" "}
         </StyledBadge>
         <div>

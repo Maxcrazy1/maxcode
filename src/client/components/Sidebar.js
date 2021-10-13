@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
 	verticalBottom :{
     margin: 0,
     position: 'absolute',
-    top: '90vh',
+    top: '94vh',
     left: '0.7vh',
     '-ms-transform': 'translateY(-50%)',
     transform: 'translateY(-50%)',
