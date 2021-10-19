@@ -227,7 +227,7 @@ const AboutSecondRow = () => {
         </Card>
       </Col>
       <Col xs={12} sm={12} md={6}>
-        <Card>
+        <Card className={classes.mt4}>
           <CardContent>
             <Typography
               className={classes.titleCard}

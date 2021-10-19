@@ -29,8 +29,10 @@
     "react-toastify": "^7.0.4",
     "react-typing-effect": "^2.0.5",
     "scrollreveal": "^4.0.9",
+    "simple-react-lightbox": "^3.6.9-0",
     "slate": "^0.62.0",
     "slate-react": "^0.62.0",
+    "slick-carousel": "^1.8.1",
     "sweetalert": "^2.1.2",
     "web-vitals": "^0.2.4"
   },

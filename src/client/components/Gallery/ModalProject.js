@@ -4,8 +4,9 @@ import Chip from "@material-ui/core/Chip";
 import { Img } from "react-image";
 import Skeleton from "@material-ui/lab/Skeleton";
 import "../../styles/helpers.css";
-import { Carousel } from "react-responsive-carousel";
 import { makeStyles } from "@material-ui/core/styles";
+import { SRLWrapper } from "simple-react-lightbox";
+          import Slider from "react-slick";
 
 
 const fillChips = (language) => {
@@ -15,7 +16,8 @@ const fillChips = (language) => {
 };
 
 const setImagesProject = (image,classes) => {
-  return (
+ return (
+    <a href={image}>
             <Img
               src={image}
               alt="image project"
@@ -23,6 +25,7 @@ const setImagesProject = (image,classes) => {
               loader={<Skeleton animation="wave" height="100%" />}
             />
  
+      </a>
   );
 };
 
@@ -30,6 +33,7 @@ const setImagesProject = (image,classes) => {
 const useStyles = makeStyles((theme) => ({
   imgCover: {
     height: "100%",
+    width: "100% !important",
     objectFit: "contain",
     objectPosition: "center center",
   },
@@ -51,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "auto",
     paddingLeft:"1.5rem",
     paddingRight:"1.5rem",
-  }
+  },
 
 }));
 
@@ -59,6 +63,13 @@ const useStyles = makeStyles((theme) => ({
 
 const ModalProject = ({ project, show, handleClose }) => {
 const classes = useStyles();
+    const settings = {
+      infinite:true,
+      arrows:false,
+          autoplay: true,
+      autoplaySpeed: 1000
+    };
+
   return (
     <Modal size="xl" show={show} onHide={handleClose}>
       <Modal.Header className={classes.textCenter} closeButton>
@@ -78,20 +89,14 @@ const classes = useStyles();
       <Modal.Body>
         <Row>
           <Col xs={12} sm={12} md={5}>
-            
-          <Carousel
-infiniteLoop
-autoPlay
-          stopOnHover
-          interval={3500}
-          showIndicators={false}
-          showStatus={false}
-          showArrows={true}>
+
+    <SRLWrapper>
+          <Slider {...settings}>
             {project.internalImages
-              ? project.internalImages.map((internalImage) => setImagesProject(internalImage,classes))
-              : null}
- 
-         </Carousel>
+            ? project.internalImages.map((internalImage) => setImagesProject(internalImage,classes))
+            : null}
+          </Slider>
+    </SRLWrapper>
           </Col>
           <Col
             className={classes.textDescription}
