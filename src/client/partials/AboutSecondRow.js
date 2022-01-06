@@ -164,6 +164,7 @@ const AboutSecondRow = () => {
                   <Typography variant="h6" component="h1">
                     2021
                   </Typography>
+                  <Typography>Serverless</Typography>
                   <Typography>Laravel TDD + Dusk</Typography>
                   <Typography>October Framework</Typography>
                   <Typography>Ruby on Rails</Typography>
