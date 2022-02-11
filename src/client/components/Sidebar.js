@@ -103,7 +103,7 @@ const useStyles = makeStyles((theme) => ({
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.linkedin.com/in/serranocristian/"
+              href="https://www.linkedin.com/in/maxcode/"
             >
  
 <Avatar

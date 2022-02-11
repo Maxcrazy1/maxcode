@@ -55,7 +55,7 @@ export default function CustomizedTimeline() {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.linkedin.com/in/serranocristian/"
+              href="https://www.linkedin.com/in/maxcode/"
             >
               <Avatar
                 alt="Linkedin"
@@ -197,7 +197,7 @@ export default function CustomizedTimeline() {
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>
-<TimelineDot color="textSecondary">
+          <TimelineDot color="textSecondary">
             <Avatar
               alt="Github"
               src="https://cdn.iconscout.com/icon/free/png-256/github-163-761603.png"
