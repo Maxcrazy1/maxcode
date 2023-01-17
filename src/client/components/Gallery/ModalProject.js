@@ -5,9 +5,7 @@ import { Img } from "react-image";
 import Skeleton from "@material-ui/lab/Skeleton";
 import "../../styles/helpers.css";
 import { makeStyles } from "@material-ui/core/styles";
-import { SRLWrapper } from "simple-react-lightbox";
-          import Slider from "react-slick";
-
+import Slider from "react-slick";
 
 const fillChips = (language) => {
   return (
@@ -15,20 +13,18 @@ const fillChips = (language) => {
   );
 };
 
-const setImagesProject = (image,classes) => {
- return (
-    <a href={image}>
-            <Img
-              src={image}
-              alt="image project"
-              className={classes.imgCover}
-              loader={<Skeleton animation="wave" height="100%" />}
-            />
- 
-      </a>
+const setImagesProject = (image, classes) => {
+  return (
+    <a href="/#">
+      <Img
+        src={image}
+        alt="image project"
+        className={classes.imgCover}
+        loader={<Skeleton animation="wave" height="100%" />}
+      />
+    </a>
   );
 };
-
 
 const useStyles = makeStyles((theme) => ({
   imgCover: {
@@ -43,32 +39,29 @@ const useStyles = makeStyles((theme) => ({
   w100: {
     width: "100% !important",
   },
-  textCenter:{
-    textAlign: "center"
+  textCenter: {
+    textAlign: "center",
   },
-  titleFont:{
-    fontFamily: 'Norwester !important'
+  titleFont: {
+    fontFamily: "Norwester !important",
   },
-  textDescription:{
-    textAlign:"justify",
+  textDescription: {
+    textAlign: "justify",
     marginBottom: "auto",
     marginTop: "auto",
-    paddingLeft:"1.5rem",
-    paddingRight:"1.5rem",
+    paddingLeft: "1.5rem",
+    paddingRight: "1.5rem",
   },
-
 }));
 
-
-
 const ModalProject = ({ project, show, handleClose }) => {
-const classes = useStyles();
-    const settings = {
-      infinite:true,
-      arrows:false,
-          autoplay: true,
-      autoplaySpeed: 1000
-    };
+  const classes = useStyles();
+  const settings = {
+    infinite: true,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 1000,
+  };
 
   return (
     <Modal size="xl" show={show} onHide={handleClose}>
@@ -76,7 +69,9 @@ const classes = useStyles();
         <Row className={classes.w100}>
           <Col xs={12} className="mb-2">
             <a href={project.url} rel="noreferrer noopener" target="_blank">
-              <Modal.Title className={classes.titleFont}>{project.name}</Modal.Title>
+              <Modal.Title className={classes.titleFont}>
+                {project.name}
+              </Modal.Title>
             </a>
           </Col>
           <Col xs={12}>
@@ -89,14 +84,13 @@ const classes = useStyles();
       <Modal.Body>
         <Row>
           <Col xs={12} sm={12} md={5}>
-
-    <SRLWrapper>
-          <Slider {...settings}>
-            {project.internalImages
-            ? project.internalImages.map((internalImage) => setImagesProject(internalImage,classes))
-            : null}
-          </Slider>
-    </SRLWrapper>
+            <Slider {...settings}>
+              {project.internalImages
+                ? project.internalImages.map((internalImage) =>
+                    setImagesProject(internalImage, classes)
+                  )
+                : null}
+            </Slider>
           </Col>
           <Col
             className={classes.textDescription}

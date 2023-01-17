@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import ProjectService from "../../services/Project";
 import ModalProject from "../components/Gallery/ModalProject";
 import Loading from "../components/Loading";
-import marked from "marked";
+import { marked } from "marked";
 import { Img } from "react-image";
 import Skeleton from "@material-ui/lab/Skeleton";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
+import { Carousel } from "react-responsive-carousel"
 
 const Gallery = ({classes}) => {
   const [project, setProject] = useState([]);
@@ -38,7 +38,7 @@ const Gallery = ({classes}) => {
             {
               key: project.key,
               name: data.name,
-              description: marked(data.description),
+              description: marked.parse(data.description),
               image: data.image,
               internalImages: data.internalImages,
               url: data.url,
@@ -49,7 +49,7 @@ const Gallery = ({classes}) => {
             {
               key: project.key,
               name: data.name,
-              description: marked(data.description),
+              description: marked.parse(data.description),
               image: data.image,
               internalImages: data.internalImages,
               url: data.url,
