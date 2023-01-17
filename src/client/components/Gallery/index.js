@@ -4,18 +4,17 @@ import GalleryContainer from "../../containers/Gallery";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-"@global": {
-"#root": {
-overflow: "hidden !important",
-
-},
-img: {
-maxwidth: "100%",
-},
-},
+  "@global": {
+    "#root": {
+      overflow: "hidden !important",
+    },
+    img: {
+      maxwidth: "100%",
+    },
+  },
   gallery: {
     padding: 0,
-    marginBottom:0,
+    marginBottom: 0,
     display: "flow-root",
     "& li:hover img": {
       "-moz-transform": "scale(1.1)",

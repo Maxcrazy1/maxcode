@@ -124,8 +124,8 @@ const AboutThirdRow = () => {
                 <CircularProgressWithLabel value={100}/>
               </Col>
               <Col className={classes.textCenter} xs={12} md={6}>
-                <Typography>Ingles A2 - B1</Typography>
-                <CircularProgressWithLabel value={50}/>
+                <Typography>Ingles B2 - C1</Typography>
+                <CircularProgressWithLabel value={70}/>
               </Col>
             </Row>
           </CardContent>
@@ -168,7 +168,7 @@ const AboutThirdRow = () => {
                 >
                   <Avatar
                     alt="Workana"
-                    src="https://pbs.twimg.com/profile_images/1212755512749625352/XKvflqnf_400x400.jpg"
+                    src="https://play-lh.googleusercontent.com/aFN7k9MvsR28UbHFZZDdHvE_9jP7ryUWrYsXaRAAQomBZ8d05jRIAeykfbiaeGKSxw4=s256-rw"
                     className={classes.large}
                   />
                   <Typography color="textSecondary" className>

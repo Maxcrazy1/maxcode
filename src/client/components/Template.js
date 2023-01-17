@@ -23,9 +23,9 @@ const useStyles = makeStyles(() => ({
   contentWrapper: {
     height: "100%",
     minWidth: 0,
-    width: "97%",
-    marginLeft: "3%",
+    width: "100%",
     padding: 0,
+    position:'fixed'
   },
   floatRound: {
     position: "fixed",
@@ -78,7 +78,7 @@ const Template = ({ RenderComponent }) => {
           </div>
         </>
       ) : (
-        <Container fluid>
+        <Container>
           <Row>
             <Col style={{ padding: 0 }} xs={12}>
               {RenderComponent}

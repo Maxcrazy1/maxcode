@@ -158,7 +158,7 @@ const AboutFirstRow = () => {
                 <Avatar
                   className={classes.mxAuto}
                   alt="icon"
-                  src="https://image.flaticon.com/icons/png/128/2210/2210159.png"
+                  src="https://cdn-icons-png.flaticon.com/128/2210/2210159.png"
                 ></Avatar>
                 <Typography>Desarrollo web</Typography>
               </Col>
@@ -166,7 +166,7 @@ const AboutFirstRow = () => {
                 <Avatar
                   className={classes.mxAuto}
                   alt="icon"
-                  src="https://image.flaticon.com/icons/png/128/2920/2920329.png"
+                  src="https://cdn-icons-png.flaticon.com/128/2920/2920329.png"
                 ></Avatar>
                 <Typography>Desarrollo movíl</Typography>
               </Col>
@@ -174,7 +174,7 @@ const AboutFirstRow = () => {
                 <Avatar
                   className={classes.mxAuto}
                   alt="icon"
-                  src="https://image.flaticon.com/icons/png/128/2752/2752571.png"
+                  src="https://cdn-icons-png.flaticon.com/128/2752/2752571.png"
                 ></Avatar>
                 <Typography>Desarrollo de escritorio</Typography>
               </Col>
@@ -182,7 +182,7 @@ const AboutFirstRow = () => {
                 <Avatar
                   className={classes.mxAuto}
                   alt="icon"
-                  src="https://image.flaticon.com/icons/png/128/2721/2721305.png"
+                  src="https://cdn-icons-png.flaticon.com/128/2721/2721305.png"
                 ></Avatar>
                 <Typography>UI & UX Design</Typography>
               </Col>

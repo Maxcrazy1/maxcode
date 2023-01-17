@@ -140,7 +140,7 @@ export default function CustomizedTimeline() {
             >
               <Avatar
                 alt="Workana"
-                src="https://pbs.twimg.com/profile_images/1212755512749625352/XKvflqnf_400x400.jpg"
+                src="https://play-lh.googleusercontent.com/aFN7k9MvsR28UbHFZZDdHvE_9jP7ryUWrYsXaRAAQomBZ8d05jRIAeykfbiaeGKSxw4=s256-rw"
               />
             </a>
           </TimelineDot>

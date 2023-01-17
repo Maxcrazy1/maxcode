@@ -20,7 +20,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Avatar from "@material-ui/core/Avatar";
 
-
 const BorderLinearProgress = withStyles((theme) => ({
   root: {
     height: 10,
@@ -66,14 +65,13 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "20px",
     },
   },
-mxAuto:{
-    marginLeft:"auto",
-    marginRight:"auto"
+  mxAuto: {
+    marginLeft: "auto",
+    marginRight: "auto",
   },
-  mt4:{
-    marginTop:"2rem"  
-  }
-
+  mt4: {
+    marginTop: "2rem",
+  },
 }));
 
 const AboutSecondRow = () => {
@@ -81,66 +79,6 @@ const AboutSecondRow = () => {
   return (
     <React.Fragment>
       <Col xs={12} sm={12} md={6}>
-        <Card>
-          <CardContent>
-            <Typography
-              className={classes.titleCard}
-              color="textSecondary"
-              gutterBottom
-            >
-              Educación
-            </Typography>
-
-            <Timeline align="left">
-              <TimelineItem>
-                <TimelineOppositeContent
-                  style={{ flex: 0 }}
-                ></TimelineOppositeContent>
-                <TimelineSeparator>
-                  <TimelineDot />
-                  <TimelineConnector />
-                </TimelineSeparator>
-                <TimelineContent>
-                  <Typography variant="h6" component="h1">
-                    Universitaria 2017 - 2019
-                  </Typography>
-                  <Typography>IUTA VEN</Typography>
-                </TimelineContent>
-              </TimelineItem>
-              <TimelineItem>
-                <TimelineOppositeContent
-                  style={{ flex: 0 }}
-                ></TimelineOppositeContent>
-
-                <TimelineSeparator>
-                  <TimelineDot />
-                  <TimelineConnector />
-                </TimelineSeparator>
-                <TimelineContent>
-                  <Typography variant="h6" component="h1">
-                    Secundaria 2012 - 2016
-                  </Typography>
-                  <Typography>U.E.P Francisco de Miranda</Typography>
-                </TimelineContent>
-              </TimelineItem>
-              <TimelineItem>
-                <TimelineOppositeContent
-                  style={{ flex: 0 }}
-                ></TimelineOppositeContent>
-                <TimelineSeparator>
-                  <TimelineDot />
-                  <TimelineConnector />
-                </TimelineSeparator>
-                <TimelineContent>
-                  <Typography variant="h6" component="h1">
-                    Primaria 2006 - 2012
-                  </Typography>
-                  <Typography>Abigail González</Typography>
-                </TimelineContent>
-              </TimelineItem>
-            </Timeline>
-          </CardContent>
-        </Card>
         <Card className={classes.mt4}>
           <CardContent>
             <Typography
@@ -226,6 +164,34 @@ const AboutSecondRow = () => {
             </Timeline>
           </CardContent>
         </Card>
+        <Card className={classes.mt4}>
+          <CardContent>
+            <Typography
+              className={classes.titleCard}
+              color="textSecondary"
+              gutterBottom
+            >
+              Educación
+            </Typography>
+
+            <Timeline align="left">
+              <TimelineItem>
+                <TimelineOppositeContent
+                  style={{ flex: 0 }}
+                ></TimelineOppositeContent>
+                <TimelineSeparator>
+                  <TimelineDot />
+                </TimelineSeparator>
+                <TimelineContent>
+                  <Typography variant="h6" component="h1">
+                    Universitaria 2017 - 2019
+                  </Typography>
+                  <Typography>IUTA VEN</Typography>
+                </TimelineContent>
+              </TimelineItem>
+            </Timeline>
+          </CardContent>
+        </Card>
       </Col>
       <Col xs={12} sm={12} md={6}>
         <Card className={classes.mt4}>
@@ -238,7 +204,7 @@ const AboutSecondRow = () => {
               Habilidades profesionales
             </Typography>
 
-            <List dense={true}  subheader={<li />}>
+            <List dense={true} subheader={<li />}>
               <li className={classes.listSection}>
                 <ul className={classes.ul}>
                   <ListSubheader>Backend</ListSubheader>
@@ -300,7 +266,7 @@ const AboutSecondRow = () => {
                   <ListItem>
                     <ListItemAvatar>
                       <Avatar
-                        className={classes.mxAuto} 
+                        className={classes.mxAuto}
                         alt="icon"
                         src="https://cdn.iconscout.com/icon/free/png-256/ruby-226055.png"
                       ></Avatar>
@@ -338,7 +304,7 @@ const AboutSecondRow = () => {
                       <Avatar
                         className={classes.mxAuto}
                         alt="icon"
-                        src="https://justcodeit.io/wp-content/uploads/Git_icon.svg_.png"
+                        src="https://cdn-icons-png.flaticon.com/64/2111/2111420.png"
                       ></Avatar>
                     </ListItemAvatar>
                     <ListItemText
@@ -392,7 +358,7 @@ const AboutSecondRow = () => {
                       <Avatar
                         className={classes.mxAuto}
                         alt="icon"
-                        src="https://image.flaticon.com/icons/png/512/919/919844.png"
+                        src="https://cdn-icons-png.flaticon.com/64/919/919844.png"
                       ></Avatar>
                     </ListItemAvatar>
                     <ListItemText
@@ -466,7 +432,7 @@ const AboutSecondRow = () => {
                       <Avatar
                         className={classes.mxAuto}
                         alt="icon"
-                        src="https://uxwing.com/wp-content/themes/uxwing/download/10-brands-and-social-media/tailwind-css.png"
+                        src="https://www.raycast.com/_next/image?url=https%3A%2F%2Ffiles.raycast.com%2F1n3nzpgkn8p55jdy8d9rezrs0d9k&w=128&q=75"
                       ></Avatar>
                     </ListItemAvatar>
                     <ListItemText
@@ -484,7 +450,7 @@ const AboutSecondRow = () => {
                   <ListItem>
                     <ListItemAvatar>
                       <Avatar
-                        className={classes.mxAuto} 
+                        className={classes.mxAuto}
                         alt="icon"
                         src="https://miro.medium.com/max/525/1*mrOXGyIa3BlPK80peLmEbA.png"
                       ></Avatar>
