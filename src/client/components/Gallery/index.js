@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
     padding: 0,
     marginBottom: 0,
     display: "flow-root",
+    position:"fixed",
     "& li:hover img": {
       "-moz-transform": "scale(1.1)",
       "-webkit-transform": "scale(1.1)",

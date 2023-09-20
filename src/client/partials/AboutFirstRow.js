@@ -71,27 +71,27 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "20px",
     },
   },
-  mb4:{
-    marginBottom:"2rem",
+  mb4: {
+    marginBottom: "2rem",
   },
-  mb4AndCenter:{
-    marginBottom:"2rem",
-    textAlign:"center"
+  mb4AndCenter: {
+    marginBottom: "2rem",
+    textAlign: "center",
   },
-  textCenter:{
-    textAlign:"center"
+  textCenter: {
+    textAlign: "center",
   },
-  mxAuto:{
-    marginLeft:"auto",
-    marginRight:"auto"
-  }
+  mxAuto: {
+    marginLeft: "auto",
+    marginRight: "auto",
+  },
 }));
 
 const AboutFirstRow = () => {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <Col xs={12} sm={12} md={12} className={ classes.mb4 }>
+      <Col xs={12} sm={12} md={12} className={classes.mb4}>
         <Typography variant="h2" className={classes.titleMain} gutterBottom>
           Cristian Serrano
         </Typography>
@@ -124,25 +124,38 @@ const AboutFirstRow = () => {
         </div>
       </Col>
 
-      <Col className={ classes.mb4 } xs={12} sm={12} md={8}>
+      <Col className={classes.mb4} xs={12} sm={12} md={8}>
         <div className={classes.contentDescription}>
           <Typography className={classes.textDescription}>
-            Me he vuelto un aficionado del código desde hace unos cuantos años
-            atras, me considero proactivo y curioso, me gusta aprender y mejorar 📚, si trabajo solo me esfuerzo 
-            por aplicar los mejores estandares en el proyecto, y si estoy en equipo me gusta oír, ver y aplicar 
-            para seguir puliendo y mejorando mis conocimientos y así ser un apoyo 
-            en las necesidades de la empresa o el equipo. 🤝✨
+            🚀 Apasionado del código con años de experiencia: Me he vuelto un
+            apasionado del código desde hace unos cuantos años atrás. Cada día,
+            me sumerjo en el fascinante mundo del desarrollo y busco
+            constantemente aprender y mejorar mis habilidades técnicas. 📚💡
             <br></br>
             <br></br>
-            En mi viaje 🛫 seguiran habiendo muchos
-            peldaños que seguir subiendo, aún así lo hago con animo 🤩💪, porque
-            me encanta desarrollar aplicaciones, sistemas y soluciones
-            modulares, prolijas y escalables ✅💻📱
+            💡 Proactivo y curioso: Mi enfoque proactivo y curiosidad insaciable
+            me impulsan a explorar nuevas tecnologías y enfoques innovadores.
+            Siempre estoy buscando desafíos estimulantes que me permitan crecer
+            y superar mis límites.
+            <br></br>
+            <br></br>
+            💪🔍👨‍💻 Cuando colaboro en equipo, valoro escuchar, observar y
+            aplicar las mejores prácticas para pulir y mejorar mis
+            conocimientos. Creo firmemente que el trabajo en equipo es esencial
+            para lograr resultados excepcionales. 🤝✨
+            <br></br>
+            <br></br>
+            ✈️ Un viaje emocionante en constante crecimiento: Mi viaje en el
+            desarrollo es como un emocionante vuelo hacia nuevos horizontes. Me
+            apasiona desarrollar aplicaciones, sistemas y soluciones modulares,
+            prolijas y escalables. Mi objetivo es crear productos impactantes y
+            de alta calidad que cumplan con las necesidades de los usuarios.
+            ✅💻📱
           </Typography>
         </div>
       </Col>
       <Col xs={12} sm={12} md={4}>
-        <Card className={ classes.mb4}>
+        <Card className={classes.mb4}>
           <CardContent>
             <Row>
               <Col md={12}>
@@ -154,7 +167,7 @@ const AboutFirstRow = () => {
                   Lo que hago
                 </Typography>
               </Col>
-              <Col xs={6} className={classes.mb4AndCenter} >
+              <Col xs={6} className={classes.mb4AndCenter}>
                 <Avatar
                   className={classes.mxAuto}
                   alt="icon"

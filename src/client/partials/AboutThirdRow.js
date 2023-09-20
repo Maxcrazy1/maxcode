@@ -83,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
   },
   mtb4:{
     marginTop:"2rem",
-    marginBottom:"2rem",
+    marginBottom:"4rem",
   }
 }));
 
@@ -125,7 +125,7 @@ const AboutThirdRow = () => {
               </Col>
               <Col className={classes.textCenter} xs={12} md={6}>
                 <Typography>Ingles B2 - C1</Typography>
-                <CircularProgressWithLabel value={70}/>
+                <CircularProgressWithLabel value={60}/>
               </Col>
             </Row>
           </CardContent>
@@ -180,7 +180,7 @@ const AboutThirdRow = () => {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://www.workana.com/freelancer/cb5160fa0f884e46a21e7c1ac0e81e54"
+                  href="https://www.linkedin.com/in/criserrano/"
                 >
                   <Avatar
                     alt="Linkedin"

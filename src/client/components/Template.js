@@ -22,10 +22,9 @@ const useStyles = makeStyles(() => ({
   },
   contentWrapper: {
     height: "100%",
-    minWidth: 0,
-    width: "100%",
+    width: "calc(100% - 3rem)",
     padding: 0,
-    position:'fixed'
+    marginLeft: "3rem",
   },
   floatRound: {
     position: "fixed",

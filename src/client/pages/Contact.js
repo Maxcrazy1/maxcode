@@ -54,18 +54,17 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "18px",
   },
   h100: {
-    height: "100%"
+    height: "100%",
   },
-  mAuto:{
-    marginLeft:"auto",
-    marginRight:"auto",
-    marginBottom:"auto",
-    marginTop:"auto"
+  mAuto: {
+    marginLeft: "auto",
+    marginRight: "auto",
+    marginBottom: "auto",
+    marginTop: "auto",
   },
-  titleFont:{
-    fontFamily: "Norwester !important"
+  titleFont: {
+    fontFamily: "Norwester !important",
   },
-
 }));
 
 AOS.init();
@@ -115,12 +114,25 @@ const Contact = () => {
                     className={classes.textDescription}
                     data-aos="fade-up"
                   >
-                    Para mi sería un placer ayudarte a desarrollar tus ideas
-                    🧠📲, comparte tus necesidades conmigo, a través de
-                    cualquiera de los medios presentados en el recuadro, cuando
-                    tenga un momento disponible responderé tu mensaje 📨 y
-                    podremos analizar como dar con una solución ideal para todos
-                    😃✅🌠
+                    ¡Hola! Estoy emocionado de tener la oportunidad de colaborar
+                    contigo y ayudarte a convertir tus ideas en realidad. 🌟🤝
+                    Como desarrollador, mi objetivo principal es comprender tus
+                    necesidades y brindarte soluciones personalizadas y
+                    eficientes. Estoy aquí para escucharte y trabajar en
+                    conjunto para encontrar la mejor manera de alcanzar tus
+                    objetivos. 🧠💡
+                    <br></br>
+                    <br></br>
+                    Siéntete libre de comunicarte conmigo a través de cualquiera
+                    de los medios que se encuentran en el recuadro. Ya sea por
+                    correo electrónico, llamada telefónica o mensaje directo,
+                    estaré encantado de recibir tu mensaje y responder en el
+                    menor tiempo posible. 📲📨
+                    <br></br>
+                    <br></br>
+                    ¡Estoy ansioso por comenzar esta emocionante colaboración
+                    contigo! 💪🌠 ¡Espero con entusiasmo tu mensaje y la
+                    oportunidad de trabajar juntos! Saludos cordiales.
                   </Typography>
                 </div>
               </Col>
